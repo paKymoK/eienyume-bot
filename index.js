@@ -30,18 +30,28 @@ client.on('guildMemberAdd', member => {
   client.on('message', message => {
     let array = message.content.split(" ");
     // If the message is "how to embed"
-    if (array[0] ==="!ping") {
+    if (array[0] ==="!vn") {
       // We can create embeds using the MessageEmbed constructor
       // Read more about all that you can do with the constructor
       // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
       const embed = new RichEmbed()
       .setAuthor(json[1].name,json[1].icon)
+      .setTitle("Số sao: " + json[1].rarity +"*")
+      .setFooter("test")
+      .setTimestamp()
+      .setThumbnail(json[1].thumbnail)
+      .addField("Effect 1 : "+json[1].skill1name,json[1].skill1)
+      .addField("Effect 2 : "+json[1].skill2name,json[1].skill2)
+      .addField("Cost : ","```" +json[1].cost+"```")
         // Set the title of the field
-        .setTitle('test')
         // Set the color of the embed
-        .setColor(0xFF0000)
+      .setColor(0xFF0000)
         // Set the main content of the embed
-        .setDescription('Hello, this is a slick embed!');
+      .setDescription("Loại : " + json[1].type +"\n"+"\n"+
+                      "ID : " + json[1].id +"\n" +"\n"+
+                      "Set : " +json[1].set
+                       );
+      
       // Send the embed to the same channel as the message
       message.channel.send(embed);
     }

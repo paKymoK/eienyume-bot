@@ -2,6 +2,8 @@
     {
         "icon": "https://images-ext-2.discordapp.net/external/nNFNnlWkndSjjoDCTu8R69OhN6YC5dFaijaUnxuMtFc/https/cdn.discordapp.com/emojis/469349079105929226.png",
         "name": "Fallen Morning Star",
+        "rarity":"7",
+        "thumbnail":"https://images-ext-2.discordapp.net/external/2z_T6EQv1DTW42RrLuvFfmxIjGLDPXjF4mfcA0lhrGs/https/cdn.discordapp.com/attachments/310115270008242186/469255341515735041/2545.jpg",
         "type": "badge",
         "id": "667,678,2545",
         "set": "diabolic",
@@ -14,13 +16,15 @@
     {
         "icon": "https://images-ext-2.discordapp.net/external/nNFNnlWkndSjjoDCTu8R69OhN6YC5dFaijaUnxuMtFc/https/cdn.discordapp.com/emojis/469349079105929226.png",
         "name": "Fallen Morning Star",
-        "type": "badge",
+        "rarity":"7",
+        "thumbnail":"https://images-ext-2.discordapp.net/external/2z_T6EQv1DTW42RrLuvFfmxIjGLDPXjF4mfcA0lhrGs/https/cdn.discordapp.com/attachments/310115270008242186/469255341515735041/2545.jpg",
+        "type": "Huy hiệu",
         "id": "667,678,2545",
-        "set": "diabolic",
+        "set": "Diabolic",
         "skill1name": " Price of Pride",
-        "skill1": "When there are no enemies within a 150 range, you gain 35% (45%) movement speed and deal 135% (175%) increased overall damage; when there are enemies within the same range, you gain 30% (40%) evasion. Any of these effects expire in 3 seconds.",
+        "skill1": "Khi không có kẻ địch trong 150 khoảng cách, nhận 35% (45%) tốc chạy và tăng 135% (175%) tổng damage; Khi có kẻ địch trong 150 khoảng cách, nhận được 30% (40%) né. Các hiệu ứng sẽ mất đi sau khi đôi effect trong 3 giây.",
         "skill2name": "Star of Dawn",
-        "skill2": "Pickup radius + 150 (250), HP and ammo recovery + 30% (50%).",
+        "skill2": "Khoảng cách nhặt đồ + 150 (250), Hồi máu và hồi đạn + 30% (50%).",
         "cost": "50" 
     }
 ]
