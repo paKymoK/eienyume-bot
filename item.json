@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "https://images-ext-2.discordapp.net/external/nNFNnlWkndSjjoDCTu8R69OhN6YC5dFaijaUnxuMtFc/https/cdn.discordapp.com/emojis/469349079105929226.png",
+        "name": "Fallen Morning Star",
+        "type": "badge",
+        "id": "667,678,2545",
+        "set": "diabolic",
+        "skill1name": " Price of Pride",
+        "skill1": "When there are no enemies within a 150 range, you gain 35% (45%) movement speed and deal 135% (175%) increased overall damage; when there are enemies within the same range, you gain 30% (40%) evasion. Any of these effects expire in 3 seconds.",
+        "skill2name": "Star of Dawn",
+        "skill2": "Pickup radius + 150 (250), HP and ammo recovery + 30% (50%).",
+        "cost": "50"
+    },
+    {
+        "icon": "https://images-ext-2.discordapp.net/external/nNFNnlWkndSjjoDCTu8R69OhN6YC5dFaijaUnxuMtFc/https/cdn.discordapp.com/emojis/469349079105929226.png",
+        "name": "Fallen Morning Star",
+        "type": "badge",
+        "id": "667,678,2545",
+        "set": "diabolic",
+        "skill1name": " Price of Pride",
+        "skill1": "When there are no enemies within a 150 range, you gain 35% (45%) movement speed and deal 135% (175%) increased overall damage; when there are enemies within the same range, you gain 30% (40%) evasion. Any of these effects expire in 3 seconds.",
+        "skill2name": "Star of Dawn",
+        "skill2": "Pickup radius + 150 (250), HP and ammo recovery + 30% (50%).",
+        "cost": "50" 
+    }
+]

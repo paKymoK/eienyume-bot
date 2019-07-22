@@ -8,8 +8,9 @@ const Discord = require('discord.js');
 const { Client, Attachment,RichEmbed } = require('discord.js');
 // Create an instance of a Discord client
 const client = new Discord.Client();
-
-
+//json parser
+var fs = require('fs');
+var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
  * received from Discord
@@ -33,11 +34,10 @@ client.on('guildMemberAdd', member => {
       // We can create embeds using the MessageEmbed constructor
       // Read more about all that you can do with the constructor
       // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
-      const attachment = new Attachment('https://images-ext-2.discordapp.net/external/nNFNnlWkndSjjoDCTu8R69OhN6YC5dFaijaUnxuMtFc/https/cdn.discordapp.com/emojis/469349079105929226.png');
       const embed = new RichEmbed()
-      .setAuthor("author name","https://images-ext-2.discordapp.net/external/nNFNnlWkndSjjoDCTu8R69OhN6YC5dFaijaUnxuMtFc/https/cdn.discordapp.com/emojis/469349079105929226.png")
+      .setAuthor(json[1].name,json[1].icon)
         // Set the title of the field
-        .setTitle(attachment)
+        .setTitle('test')
         // Set the color of the embed
         .setColor(0xFF0000)
         // Set the main content of the embed
