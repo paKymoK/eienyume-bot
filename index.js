@@ -3,7 +3,7 @@
  */
 
 // Import the discord.js module
-const token = 'NjAyNTE3NzA2MTU1MjI5MTg1.XTSEyA.ilPWxHdr5G5l2l6tFdmUThthfeo'
+const token = 'NjAyNTE3NzA2MTU1MjI5MTg1.XTXvDA.XLiFPfI2nMmMMgJ04Z4BwOQrINM'
 const Discord = require('discord.js');
 const { Client, Attachment,RichEmbed } = require('discord.js');
 // Create an instance of a Discord client
@@ -34,12 +34,18 @@ client.on('guildMemberAdd', member => {
       // We can create embeds using the MessageEmbed constructor
       // Read more about all that you can do with the constructor
       // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
+      const setItem = client.emojis.find(emoji => emoji.name === json[1].set);
+      const starNumber = client.emojis.find(emoji => emoji.name === json[1].rarity);
+      const star = client.emojis.find(emoji => emoji.name === "star");
       const embed = new RichEmbed()
       .setAuthor(json[1].name,json[1].icon)
-      .setTitle("Số sao: " + json[1].rarity +"*")
+      .setTitle("Số sao: " + starNumber +star + "\n")
       .setFooter("test")
       .setTimestamp()
-      .setThumbnail(json[1].thumbnail)
+      if(json[1].blank != "") {
+        embed.addField(json[1].blank)
+      } 
+      embed.setThumbnail(json[1].thumbnail)
       .addField("Effect 1 : "+json[1].skill1name,json[1].skill1)
       .addField("Effect 2 : "+json[1].skill2name,json[1].skill2)
       .addField("Cost : ","```" +json[1].cost+"```")
@@ -49,9 +55,8 @@ client.on('guildMemberAdd', member => {
         // Set the main content of the embed
       .setDescription("Loại : " + json[1].type +"\n"+"\n"+
                       "ID : " + json[1].id +"\n" +"\n"+
-                      "Set : " +json[1].set
+                      "Set : "+ setItem + json[1].set
                        );
-      
       // Send the embed to the same channel as the message
       message.channel.send(embed);
     }
