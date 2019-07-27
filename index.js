@@ -3,8 +3,11 @@
  */
 //no image : https://rafver.is/wp-content/uploads/2016/05/no-image.jpg
 // Import the discord.js module
-const token = 'NjAyNTE3NzA2MTU1MjI5MTg1.XTl0XA.HiEo91-OnXh4Scdi-PLYgvo4RsQ'
+// const token = process.env.MY_API_KEY;
+
 const Discord = require('discord.js');
+require('dotenv').config();
+console.log(process.env.MY_API_KEY);
 
 const { Client, Attachment, RichEmbed } = require('discord.js');
 // Create an instance of a Discord client
@@ -106,4 +109,4 @@ client.on('message', message => {
 
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login(token);
+client.login(process.env.MY_API_KEY);
