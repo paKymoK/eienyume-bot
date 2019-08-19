@@ -8,12 +8,21 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 
+
 const { Client, Attachment, RichEmbed } = require('discord.js');
 // Create an instance of a Discord client
 const client = new Discord.Client();
 //json parser
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
+//create http server for zeit
+http.createServer((req, res) => {
+  res.writeHead(200, {
+      'Content-type': 'text/plain'
+  });
+      res.write('Hey');
+      res.end();
+  }).listen(4000);
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
  * received from Discord
