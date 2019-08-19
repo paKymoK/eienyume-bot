@@ -7,7 +7,6 @@
 
 const Discord = require('discord.js');
 require('dotenv').config();
-console.log(process.env.MY_API_KEY);
 
 const { Client, Attachment, RichEmbed } = require('discord.js');
 // Create an instance of a Discord client
@@ -62,7 +61,7 @@ client.on('message', message => {
         embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
           "Loại : " + json[id].type + "\n" + "\n" +
           "ID : " + json[id].id + "\n" + "\n" +
-          "Set : " + setItem + json[id].set
+          "Set : " + setItem+" " + json[id].set
         )
       } else {
         // Set the main content of the embed
@@ -70,7 +69,7 @@ client.on('message', message => {
           "Loại : " + json[id].type + "\n" + "\n" +
           "ID : " + json[id].id + "\n" + "\n" +
           "Thuộc tính :" + attribute + "\n" + "\n" +
-          "Set : " + setItem + json[id].set
+          "Set : " + setItem +" "+ json[id].set
         )
       }
       embed.setThumbnail(json[id].thumbnail)
