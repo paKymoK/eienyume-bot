@@ -84,3 +84,7 @@ client.on('message', message => {
 });
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.MY_API_KEY);
+React.render(
+  <h1>Hello, world!</h1>,
+  document.body
+);
