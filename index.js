@@ -1,28 +1,16 @@
 
 const Discord = require('discord.js');
 require('dotenv').config();
-
-
 const { Client, Attachment, RichEmbed } = require('discord.js');
-// Create an instance of a Discord client
 const client = new Discord.Client();
-//json parser
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
 client.on('ready', () => {
   console.log('I am ready!');
 });
-// Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find(ch => ch.name === 'new-comer-board');
-  // Do nothing if the channel wasn't found on this server
   if (!channel) return;
-  // Send the message, mentioning the member
   channel.send(`Welcome to the server, ${member}`);
 });
 client.on('message', message => {
@@ -68,7 +56,6 @@ client.on('message', message => {
         )
       }
       embed.setThumbnail(json[id].thumbnail)
-        // Set the title of the field
         .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
         .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
       if (json[id].type === "Áo") {
@@ -88,19 +75,12 @@ client.on('message', message => {
       if (json[id].moe === "Có") {
         embed.setImage(json[id].linkmoe)
       }
-      // Set the color of the embed
       embed.setColor(0xFF0000)
-      // Send the embed to the same channel as the message
       message.channel.send(embed);
     } else {
       message.channel.send("Không biết đâu :( ");
     }
-    // if(messageArray[0]=== "!!"){
-    //   message.channel.send("Đờ mờ Master bắt tao học lắm vl dỗi dcd");
-    // }
   }
 });
-
-
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.MY_API_KEY);
