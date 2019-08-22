@@ -55,7 +55,7 @@ client.on('message', message => {
     idArray.forEach(elements => {
       if (elements === messageArray[1]) {
         id = index;
-        console.log(index);
+        // console.log(index);
       }
     });
   }
@@ -71,8 +71,26 @@ client.on('message', message => {
       idlist.push(id);
     }
   }
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
   if (messageArray[0] === "!tênthật") {
     message.channel.send(message.member.user.tag);
+  }
+  if (messageArray[0] === "!gacha") {
+    var a = getRandomInt(100);
+    console.log(a)
+
+    if ((0 < a) && (a < 15)) {
+      message.channel.send("màu Vàng");
+    }
+    if (a == 0) {
+      message.channel.send("màu Hồng");
+    }
+    if (a >= 15) {
+      message.channel.send("màu Xanh");
+    }
+    a = -1;
   }
   // tìm theo tên
   if (messageArray[0] === "!tên") {
@@ -83,9 +101,9 @@ client.on('message', message => {
     if ((id != -1) && (count > 1)) {
       var description = '';
       idlist.forEach(element => {
-        console.log(element);
+        // console.log(element);
         const setItem = client.emojis.find(emoji => emoji.name === json[element].set);
-        description = description + "Tên : " + setItem + " " + json[element].name + " `-` ID : " + json[element].id + " `-` Loại :" + json[element].type + "\n" + "\n"
+        description = description + "Tên : " + setItem + " " + json[element].name + " `-` ID : " + json[element].id + " `-` Loại : " + json[element].type + "\n" + "\n"
       })
       if (description.length > 2000) {
         message.channel.send('Từ này ngắn quá , làm ơn thêm chữ đi !!');
