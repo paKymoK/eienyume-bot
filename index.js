@@ -46,6 +46,8 @@ client.on('message', message => {
   var searchString = "";
   for (var i = 1; i < messageArray.length; i++) {
     searchString = searchString + messageArray[i];
+    searchString = searchString.toLowerCase();
+    console.log(searchString);
   }
   var id = -1;
   var count = 0;
