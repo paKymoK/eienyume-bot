@@ -4,13 +4,35 @@ const { Client, Attachment, RichEmbed, Permissions } = require('discord.js');
 const client = new Discord.Client();
 const permissions = new Discord.Permissions(8);
 var fs = require('fs');
+//fire base
+var admin = require("firebase-admin");
+
+var serviceAccount = require("./bot-discord-ggz-firebase-adminsdk-24d2f-11dc647e1a.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://bot-discord-ggz.firebaseio.com"
+});
+// As an admin, the app has access to read and write all data, regardless of Security Rules
+var db = admin.database();
+var ref = db.ref("item");
+ref.once("value", function(snapshot) {
+  fs.writeFile('item.json', JSON.stringify(snapshot.val()) , function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });
+});
+
+// Nothing hêre
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
 var badword = JSON.parse(fs.readFileSync('./badword.json', 'utf8'));
+
+
+
+//discord part
+
 client.on('ready', () => {
   console.log('I am ready!');
-  const channel = guild.channels.find(ch => ch.name === 'v-tent');
-  if (!channel) return;
-  channel.send(`Welcome to the server, ${member}`);
   client.user.setPresence({
     game: {
       name: 'với lửa',
@@ -231,3 +253,4 @@ client.on('message', message => {
 });
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.MY_API_KEY);
+
