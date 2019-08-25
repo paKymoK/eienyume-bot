@@ -8,6 +8,9 @@ var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
 var badword = JSON.parse(fs.readFileSync('./badword.json', 'utf8'));
 client.on('ready', () => {
   console.log('I am ready!');
+  const channel = guild.channels.find(ch => ch.name === 'v-tent');
+  if (!channel) return;
+  channel.send(`Welcome to the server, ${member}`);
   client.user.setPresence({
     game: {
       name: 'với lửa',
@@ -47,7 +50,6 @@ client.on('message', message => {
   for (var i = 1; i < messageArray.length; i++) {
     searchString = searchString + messageArray[i];
     searchString = searchString.toLowerCase();
-    console.log(searchString);
   }
   var id = -1;
   var count = 0;
