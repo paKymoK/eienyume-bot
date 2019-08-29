@@ -34,6 +34,7 @@ ref.on("child_added", function (snapshot, prevChildKey) {
     fs.writeFile('item.json', JSON.stringify(snapshotAll.val()), function (err) {
       if (err) throw err;
     });
+
   });
 });
 ref.on("child_removed", function (snapshot) {
@@ -48,15 +49,9 @@ ref.on("child_changed", function (snapshot) {
     fs.writeFile('item.json', JSON.stringify(snapshotAll.val()), function (err) {
       if (err) throw err;
     });
+
   });
 });
-
-// Nothing hêre
-var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
-var badword = JSON.parse(fs.readFileSync('./badword.json', 'utf8'));
-
-
-
 //discord part
 
 client.on('ready', () => {
@@ -84,6 +79,7 @@ client.on('guildMemberAdd', member => {
 // });
 client.on('message', message => {
   let messageArray = message.content.split(" ");
+  var badword = JSON.parse(fs.readFileSync('./badword.json', 'utf8'));
   messageArray.every(function (element) {
     if (element === badword[1]) {
       message.member.send('Nói ``' + badword[1] + '`` là hư')
@@ -95,6 +91,7 @@ client.on('message', message => {
 
 //
 client.on('message', message => {
+  var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
   let messageArray = message.content.split(" ");
   var searchString = "";
   for (var i = 1; i < messageArray.length; i++) {
@@ -154,7 +151,7 @@ client.on('message', message => {
       message.channel.send('Không có món nào tên như nềy cả !!! ')
     }
     if ((id != -1) && (count > 1)) {
-      var description = '';
+      var description = ' ';
       idlist.forEach(element => {
         // console.log(element);
         const setItem = client.emojis.find(emoji => emoji.name === json[element].set);
@@ -224,6 +221,7 @@ client.on('message', message => {
       message.channel.send(embed);
     }
   }
+
   // tìm theo id
   if (messageArray[0] === "!id") {
     json.forEach(logArrayElements);
