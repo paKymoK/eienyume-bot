@@ -42,7 +42,7 @@ client.on('message', message => {
 client.on('message', message => {
   console.log(client.user.username);
   if (client.user.username == "Karby") {
-    message.channel.send("test");
+    message.channel.send("ĐM hàu :)");
   }
 });
 //
