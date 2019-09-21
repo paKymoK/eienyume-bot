@@ -41,11 +41,11 @@ client.on('message', message => {
 });
 client.on('message', message => {
   // console.log(message.member.id);
-  try{
-    if (message.member.id == 458890981274681345) {
-      message.channel.send("Đm hàu :)");
-    }
-  } catch{}
+  // try{
+  //   if (message.member.id == 458890981274681345) {
+  //     message.channel.send("Đm hàu :)");
+  //   }
+  // } catch{}
 });
 
 
