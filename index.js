@@ -6,6 +6,7 @@ const permissions = new Discord.Permissions(8);
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
 var badword = JSON.parse(fs.readFileSync('./badword.json', 'utf8'));
+var listbadword = badword.bad.split(",");
 client.on('ready', () => {
   console.log('I am ready!');
   client.user.setPresence({
@@ -23,36 +24,41 @@ client.on('guildMemberAdd', member => {
 });
 
 
-// client.on("typingStart", function (channel, user) {
-//   if (channel.id == 603878285792772106) {
-//     console.log(`Chào mừng ${user.tag} đến với kênh thử nghiệm`);
-//     user.send('Chào mừng ``'+ `${user.tag}` +'`` đến với kênh thử nghiệm');
-//   }
-// });
+//maplestory ở đây 
 client.on('message', message => {
+  // console.log(listbadword);
   let messageArray = message.content.split(" ");
   messageArray.every(function (element) {
-    if (element === badword[1]) {
-      message.member.send('Nói ``' + badword[1] + '`` là hư')
-      return false;
-    }
+    listbadword.forEach(elements => {
+      if (element.toLowerCase() == elements.toLowerCase()) {
+        message.member.send('Nói ``' + elements + '`` là hư')
+        return false;
+      }
+    });
+
     return true;
   })
 });
 client.on('message', message => {
-  console.log(client.user.username);
-  if (client.user.username == "Karby") {
-    message.channel.send("ĐM hàu :)");
-  }
+  // console.log(message.member.id);
+  try{
+    if (message.member.id == 458890981274681345) {
+      message.channel.send("Đm hàu :)");
+    }
+  } catch{}
 });
-//
+
+
+
+
+//game khác  , đừng quan tâm 
 client.on('message', message => {
   let messageArray = message.content.split(" ");
   var searchString = "";
   for (var i = 1; i < messageArray.length; i++) {
     searchString = searchString + messageArray[i];
     searchString = searchString.toLowerCase();
-    console.log(searchString);
+    // console.log(searchString);
   }
   var id = -1;
   var count = 0;
