@@ -39,7 +39,12 @@ client.on('message', message => {
     return true;
   })
 });
-
+client.on('message', message => {
+  console.log(client.user.username);
+  if (client.user.username == "Karby") {
+    message.channel.send("test");
+  }
+});
 //
 client.on('message', message => {
   let messageArray = message.content.split(" ");
