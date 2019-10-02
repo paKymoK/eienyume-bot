@@ -29,50 +29,56 @@ client.on('guildMemberAdd', member => {
   channel.send(`Welcome to the server, ${member}`);
 });
 //ẪẬẮẰẲẴẶẸẺẼỀỀỂ ưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ
-function removeUTF(element){
-      return element.replace(/đ/g, 'd-').replace(/Đ/g, 'D-')
-       .replace(/ù/g, 'u`').replace(/Ù/g, 'U`')
-       .replace(/À/g, 'A`').replace(/Á/g, 'A#').replace(/Â/g, 'A^')
-       .replace(/Ã/g, 'A~').replace(/È/g, 'E`').replace(/É/g, 'E#').replace(/Ê/g, 'E^').replace(/Ì/g, 'I`')
-       .replace(/Í/g, 'I#').replace(/Ò/g, 'O`').replace(/Ó/g, 'O#').replace(/Ô/g, 'O^').replace(/Õ/g, 'O~')
-       .replace(/Ú/g, 'U#').replace(/Ă/g, 'A$').replace(/Ĩ/g, 'I~').replace(/Ũ/g, 'Ũ').replace(/Ơ/g, 'O*')
-       .replace(/à/g, 'a`').replace(/á/g, 'a#').replace(/â/g, 'a^').replace(/ã/g, 'a~').replace(/è/g, 'e`')
-       .replace(/é/g, 'e#').replace(/ê/g, 'e^').replace(/ì/g, 'i`').replace(/í/g, 'i#').replace(/ò/g, 'o`')
-       .replace(/ó/g, 'o*').replace(/ô/g, 'o^').replace(/õ/g, 'o~').replace(/ú/g, 'u#').replace(/ă/g, 'aw')
-       .replace(/ĩ/g, 'i~').replace(/ũ/g, 'U~').replace(/ơ/g, 'o*').replace(/Ư/g, 'U*').replace(/Ă/g, 'Aw')
-       .replace(/Ạ/g, 'A.').replace(/Ả/g, 'A?').replace(/Ã/g, 'A~').replace(/Ầ/g, 'A^`').replace(/Ấ/g, 'A^*')
-       .replace(/Ẫ/g, 'A^~').replace(/Ậ/g, 'A^.').replace(/Ằ/g, 'Aw`').replace(/Ắ/g, 'Aw*').replace(/Ẵ/g, 'Aw~')
-       // huyền = `
-       // sắc = #
-       // phảy = *
-       
+function removeUTF(element) {
+  return element.replace(/đ/g, 'd-').replace(/Đ/g, 'D-')
+    .replace(/ù/g, 'u`').replace(/Ù/g, 'U`')
+    .replace(/À/g, 'A`').replace(/Á/g, 'A#').replace(/Â/g, 'A^')
+    .replace(/Ã/g, 'A~').replace(/È/g, 'E`').replace(/É/g, 'E#').replace(/Ê/g, 'E^').replace(/Ì/g, 'I`')
+    .replace(/Í/g, 'I#').replace(/Ò/g, 'O`').replace(/Ó/g, 'O#').replace(/Ô/g, 'O^').replace(/Õ/g, 'O~')
+    .replace(/Ú/g, 'U#').replace(/Ă/g, 'A$').replace(/Ĩ/g, 'I~').replace(/Ũ/g, 'Ũ').replace(/Ơ/g, 'O*')
+    .replace(/à/g, 'a`').replace(/á/g, 'a#').replace(/â/g, 'a^').replace(/ã/g, 'a~').replace(/è/g, 'e`')
+    .replace(/é/g, 'e#').replace(/ê/g, 'e^').replace(/ì/g, 'i`').replace(/í/g, 'i#').replace(/ò/g, 'o`')
+    .replace(/ó/g, 'o*').replace(/ô/g, 'o^').replace(/õ/g, 'o~').replace(/ú/g, 'u#').replace(/ă/g, 'aw')
+    .replace(/ĩ/g, 'i~').replace(/ũ/g, 'U~').replace(/ơ/g, 'o*').replace(/Ư/g, 'U*').replace(/Ă/g, 'Aw')
+    .replace(/Ạ/g, 'A.').replace(/Ả/g, 'A?').replace(/Ã/g, 'A~').replace(/Ầ/g, 'A^`').replace(/Ấ/g, 'A^*')
+    .replace(/Ẫ/g, 'A^~').replace(/Ậ/g, 'A^.').replace(/Ằ/g, 'Aw`').replace(/Ắ/g, 'Aw*').replace(/Ẵ/g, 'Aw~')
+  // huyền = `
+  // sắc = #
+  // phảy = *
+
 }
 
 //maplestory ở đây 
-client.on('message', message => {
-  console.log(removeUTF(message.content)+'x')
-  console.log(filter.isProfane(removeUTF(message.content)));
+// client.on('message', message => {
+//   console.log(removeUTF(message.content)+'x')
+//   console.log(filter.isProfane(removeUTF(message.content)));
 
-  // console.log(listbadword);
-  // let messageArray = message.content.split(" ");
-  // messageArray.every(function (element) {
-  //   listbadword.forEach(elements => {
-  //     if (element.toLowerCase() == elements.toLowerCase()) {
-  //       message.member.send('Nói ``' + elements + '`` là hư')
-  //       return false;
-  //     }
-  //   });
+// console.log(listbadword);
+// let messageArray = message.content.split(" ");
+// messageArray.every(function (element) {
+//   listbadword.forEach(elements => {
+//     if (element.toLowerCase() == elements.toLowerCase()) {
+//       message.member.send('Nói ``' + elements + '`` là hư')
+//       return false;
+//     }
+//   });
 
-  //   return true;
-  // })
-});
+//   return true;
+// })
+// });
+
 client.on('message', message => {
-  // console.log(message.member.id);
-  // try{
-  //   if (message.member.id == 458890981274681345) {
-  //     message.channel.send("Đm hàu :)");
-  //   }
-  // } catch{}
+  console.log(message.member.id);
+  try {
+    if (message.member.id == 337641064720760852) {
+      message.delete()
+        .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+        .catch(console.error);
+      if (permissions.has('MANAGE_MESSAGES')) {
+        message.channel.send(message.content);
+      }
+    }
+  } catch{ }
 });
 
 
@@ -136,7 +142,9 @@ client.on('message', message => {
   if (messageArray[0] === "!tên") {
     json.forEach(logArrayElementsByName);
     if (count == 0) {
-      message.channel.send('Không có món nào tên như nềy cả !!! ')
+      if (message.member.id != 602517706155229185) {
+        message.channel.send('Không có món nào tên như nềy cả !!! ')
+      }
     }
     if ((id != -1) && (count > 1)) {
       var description = '';
@@ -156,7 +164,9 @@ client.on('message', message => {
             "Gõ ``!id <ID>`` để xem chi tiết món đó" + "\n" +
             "Ví dụ ``!id 3012``");
         embed.setColor(0xFF0000)
-        message.channel.send(embed);
+        if (message.member.id != 602517706155229185) {
+          message.channel.send(embed);
+        }
       }
     }
     if ((id != -1) && (count == 1)) {
@@ -206,7 +216,9 @@ client.on('message', message => {
         embed.setImage(json[id].linkmoe)
       }
       embed.setColor(0xFF0000)
-      message.channel.send(embed);
+      if (message.member.id != 602517706155229185) {
+        message.channel.send(embed);
+      }
     }
   }
   // tìm theo id
@@ -259,9 +271,13 @@ client.on('message', message => {
         embed.setImage(json[id].linkmoe)
       }
       embed.setColor(0xFF0000)
-      message.channel.send(embed);
+      if (message.member.id != 602517706155229185) {
+        message.channel.send(embed);
+      }
     } else {
-      message.channel.send("Không biết đâu :( ");
+      if (message.member.id != 602517706155229185) {
+        message.channel.send("Không biết đâu :( ");
+      }
     }
   }
 });
