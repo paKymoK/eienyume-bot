@@ -7,6 +7,7 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "bad-words": "^3.0.3",
     "discord.js": "^11.5.1",
     "dotenv": "^8.0.0"
   },

@@ -1,12 +1,18 @@
 const Discord = require('discord.js');
+const Filter = require('bad-words');
 require('dotenv').config();
 const { Client, Attachment, RichEmbed, Permissions } = require('discord.js');
 const client = new Discord.Client();
 const permissions = new Discord.Permissions(8);
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
+//bad word
 var badword = JSON.parse(fs.readFileSync('./badword.json', 'utf8'));
 var listbadword = badword.bad.split(",");
+var filter = new Filter();
+filter.addWords(...listbadword);
+filter.addWords('ĐÈ')
+//BEGIN
 client.on('ready', () => {
   console.log('I am ready!');
   client.user.setPresence({
@@ -22,22 +28,43 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   channel.send(`Welcome to the server, ${member}`);
 });
-
+//ẪẬẮẰẲẴẶẸẺẼỀỀỂ ưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ
+function removeUTF(element){
+      return element.replace(/đ/g, 'd-').replace(/Đ/g, 'D-')
+       .replace(/ù/g, 'u`').replace(/Ù/g, 'U`')
+       .replace(/À/g, 'A`').replace(/Á/g, 'A#').replace(/Â/g, 'A^')
+       .replace(/Ã/g, 'A~').replace(/È/g, 'E`').replace(/É/g, 'E#').replace(/Ê/g, 'E^').replace(/Ì/g, 'I`')
+       .replace(/Í/g, 'I#').replace(/Ò/g, 'O`').replace(/Ó/g, 'O#').replace(/Ô/g, 'O^').replace(/Õ/g, 'O~')
+       .replace(/Ú/g, 'U#').replace(/Ă/g, 'A$').replace(/Ĩ/g, 'I~').replace(/Ũ/g, 'Ũ').replace(/Ơ/g, 'O*')
+       .replace(/à/g, 'a`').replace(/á/g, 'a#').replace(/â/g, 'a^').replace(/ã/g, 'a~').replace(/è/g, 'e`')
+       .replace(/é/g, 'e#').replace(/ê/g, 'e^').replace(/ì/g, 'i`').replace(/í/g, 'i#').replace(/ò/g, 'o`')
+       .replace(/ó/g, 'o*').replace(/ô/g, 'o^').replace(/õ/g, 'o~').replace(/ú/g, 'u#').replace(/ă/g, 'aw')
+       .replace(/ĩ/g, 'i~').replace(/ũ/g, 'U~').replace(/ơ/g, 'o*').replace(/Ư/g, 'U*').replace(/Ă/g, 'Aw')
+       .replace(/Ạ/g, 'A.').replace(/Ả/g, 'A?').replace(/Ã/g, 'A~').replace(/Ầ/g, 'A^`').replace(/Ấ/g, 'A^*')
+       .replace(/Ẫ/g, 'A^~').replace(/Ậ/g, 'A^.').replace(/Ằ/g, 'Aw`').replace(/Ắ/g, 'Aw*').replace(/Ẵ/g, 'Aw~')
+       // huyền = `
+       // sắc = #
+       // phảy = *
+       
+}
 
 //maplestory ở đây 
 client.on('message', message => {
-  // console.log(listbadword);
-  let messageArray = message.content.split(" ");
-  messageArray.every(function (element) {
-    listbadword.forEach(elements => {
-      if (element.toLowerCase() == elements.toLowerCase()) {
-        message.member.send('Nói ``' + elements + '`` là hư')
-        return false;
-      }
-    });
+  console.log(removeUTF(message.content)+'x')
+  console.log(filter.isProfane(removeUTF(message.content)));
 
-    return true;
-  })
+  // console.log(listbadword);
+  // let messageArray = message.content.split(" ");
+  // messageArray.every(function (element) {
+  //   listbadword.forEach(elements => {
+  //     if (element.toLowerCase() == elements.toLowerCase()) {
+  //       message.member.send('Nói ``' + elements + '`` là hư')
+  //       return false;
+  //     }
+  //   });
+
+  //   return true;
+  // })
 });
 client.on('message', message => {
   // console.log(message.member.id);
@@ -139,7 +166,7 @@ client.on('message', message => {
       const attribute = client.emojis.find(emoji => emoji.name === json[id].attribute);
       const embed = new RichEmbed()
         .setTitle(setItem + " " + json[id].name)
-        .setFooter("Slave của Wanderer")
+        .setFooter("Slave của Pằng pằng chíu chíu")
         .setTimestamp()
       //Nếu là Wea/badge/Armor thì add 
       if (json[id].attribute === "") {
