@@ -66,7 +66,7 @@ function removeUTF(element) {
 //   return true;
 // })
 // });
-const humandroid = [337641064720760852];
+const humandroid = [];
 client.on('message', message => {
   let messageArray = message.content.split(" ");
   if (message.member.id == 337641064720760852) {
@@ -78,6 +78,12 @@ client.on('message', message => {
       try {
         var pos = humandroid.indexOf(messageArray[1]);
         humandroid.splice(pos, 1)
+      }
+      catch{ }
+    }
+    if (messageArray[0] == '!list') {
+      try {
+        message.channel.send(humandroid);
       }
       catch{ }
     }
