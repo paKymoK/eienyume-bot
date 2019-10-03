@@ -71,7 +71,7 @@ client.on('message', message => {
   try {
     permissions.add('MANAGE_MESSAGES', 'MANAGE_ROLES', 'ADMINISTRATOR');
 
-    if (message.member.id == 337641064720760852 | message.member.id == 458890981274681345 ) {
+    if (message.member.id == 337641064720760852 | message.member.id == 458890981274681345 | message.member.id ==336753771742887946 ) {
       var role = message.guild.roles.find(role => role.id === 599168921815482369);
       console.log(role)
       // message.member.addRole(role);
