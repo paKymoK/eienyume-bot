@@ -68,17 +68,22 @@ function removeUTF(element) {
 // });
 
 client.on('message', message => {
-  console.log(message.member.id);
   try {
+    permissions.add('MANAGE_MESSAGES', 'MANAGE_ROLES', 'ADMINISTRATOR');
+
     if (message.member.id == 337641064720760852) {
-      message.delete()
-        .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-        .catch(console.error);
-      if (permissions.has('MANAGE_MESSAGES')) {
+      var role = message.guild.roles.find(role => role.id === 599168921815482369);
+      console.log(role)
+      // message.member.addRole(role);
+      // console.log(message.member.permissions.toArray(true));
+      if (permissions.has('MANAGE_MESSAGES') && message.deletable) {
+        message.delete()
+          .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+          .catch(console.error);
         message.channel.send(message.content);
       }
     }
-  } catch{ }
+  } catch{ console.log('not OK') }
 });
 
 
@@ -86,7 +91,8 @@ client.on('message', message => {
 
 //game khác  , đừng quan tâm 
 client.on('message', message => {
-  if (message.member.id == 337641064720760852) {
+  //message.member.id == 337641064720760852 |
+  if ( 0 == 0) {
     let messageArray = message.content.split(" ");
     var searchString = "";
     for (var i = 1; i < messageArray.length; i++) {
@@ -223,7 +229,7 @@ client.on('message', message => {
       }
     }
     // tìm theo id
-    if (messageArray[0] === "!id") {
+    if (messageArray[0] === "!i") {
       json.forEach(logArrayElements);
       if (id != -1) {
         const setItem = client.emojis.find(emoji => emoji.name === json[id].set);
