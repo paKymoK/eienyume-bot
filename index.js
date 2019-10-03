@@ -229,7 +229,7 @@ client.on('message', message => {
       }
     }
     // tìm theo id
-    if (messageArray[0] === "!i") {
+    if (messageArray[0] === "!id") {
       json.forEach(logArrayElements);
       if (id != -1) {
         const setItem = client.emojis.find(emoji => emoji.name === json[id].set);
