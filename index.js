@@ -68,54 +68,56 @@ function removeUTF(element) {
 // });
 const humandroid = [];
 client.on('message', message => {
-  let messageArray = message.content.split(" ");
-  if (message.member.id == 337641064720760852) {
-    if (messageArray[0] == '!add') {
-      try { humandroid.push(messageArray[1]) }
-      catch{ }
-    }
-    if (messageArray[0] == '!remove') {
-      try {
-        var pos = humandroid.indexOf(messageArray[1]);
-        humandroid.splice(pos, 1)
+  if (message.channel.id != 598353995513462785) {
+    let messageArray = message.content.split(" ");
+    if (message.member.id == 337641064720760852) {
+      if (messageArray[0] == '!add') {
+        try { humandroid.push(messageArray[1]) }
+        catch{ }
       }
-      catch{ }
-    }
-    if (messageArray[0] == '!list') {
-      try {
-        message.channel.send(humandroid);
-      }
-      catch{ }
-    }
-  }
-  if (messageArray[0] == '!bot') {
-    humandroid.push(message.member.id);
-  }
-  if (messageArray[0] == '!notbot') {
-    var pos = humandroid.indexOf(message.member.id);
-    humandroid.splice(pos, 1);
-  }
-  try {
-    permissions.add('MANAGE_MESSAGES', 'MANAGE_ROLES', 'ADMINISTRATOR');
-    // message.member.id == 337641064720760852 |
-    // message.member.id == 458890981274681345 |
-    humandroid.forEach(function (item, index, array) {
-      console.log(item)
-      if (message.member.id == item && messageArray[0] != '!bot' && messageArray[0] != '!notbot' && message.member.id != 602517706155229185) {
-        var role = message.guild.roles.find(role => role.id === 599168921815482369);
-        console.log(role)
-        // message.member.addRole(role);
-        // console.log(message.member.permissions.toArray(true));
-        if (permissions.has('MANAGE_MESSAGES') && message.deletable) {
-          message.delete()
-            .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-            .catch(console.error);
-          message.channel.send(message.content);
+      if (messageArray[0] == '!remove') {
+        try {
+          var pos = humandroid.indexOf(messageArray[1]);
+          humandroid.splice(pos, 1)
         }
+        catch{ }
       }
-    });
+      if (messageArray[0] == '!list') {
+        try {
+          message.channel.send(humandroid);
+        }
+        catch{ }
+      }
+    }
+    if (messageArray[0] == '!bot') {
+      humandroid.push(message.member.id);
+    }
+    if (messageArray[0] == '!notbot') {
+      var pos = humandroid.indexOf(message.member.id);
+      humandroid.splice(pos, 1);
+    }
+    try {
+      permissions.add('MANAGE_MESSAGES', 'MANAGE_ROLES', 'ADMINISTRATOR');
+      // message.member.id == 337641064720760852 |
+      // message.member.id == 458890981274681345 |
+      humandroid.forEach(function (item, index, array) {
+        console.log(item)
+        if (message.member.id == item && messageArray[0] != '!bot' && messageArray[0] != '!notbot' && message.member.id != 602517706155229185) {
+          var role = message.guild.roles.find(role => role.id === 599168921815482369);
+          console.log(role)
+          // message.member.addRole(role);
+          // console.log(message.member.permissions.toArray(true));
+          if (permissions.has('MANAGE_MESSAGES') && message.deletable) {
+            message.delete()
+              .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+              .catch(console.error);
+            message.channel.send(message.content);
+          }
+        }
+      });
 
-  } catch{ console.log('not OK') }
+    } catch{ console.log('not OK') }
+  }
 });
 
 
