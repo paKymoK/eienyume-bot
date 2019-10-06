@@ -96,9 +96,9 @@ client.on('message', message => {
     if (category) {
       try {
         message.channel.setName('▶' + '-' + channelName[0] + '-' + '⏱' + '-' + 'đang tính')
-        startCountdown(messageArray[1], messageArray[2], message, client)
+        startCountdown(messageArray[1], messageArray[2], messageArray[3], client)
       } catch{
-        console.error
+        message.channel.send("Nhập sai cú pháp r")
       }
     }
   }
