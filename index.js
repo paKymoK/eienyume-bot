@@ -67,6 +67,39 @@ function makeChannel(message) {
     }).catch(console.error);
 }
 
+function startCountdown(hour,minute, message) {
+  var counter = minute + hour*60;
+  var interval = setInterval(() => {
+    console.log(counter);
+    counter--;
+    let channelName = message.channel.name.split('-');
+    message.channel.setName('▶' + '-' + channelName[1] + '-' + '⏱' + '-' + Math.floor(counter/60)+'h'+counter%60+'p')
+    console.log(message.channel.name)
+    if (counter < 1) {
+      // The code here will run when
+      // the timer has reached zero.
+      message.channel.setName('⏸' + '-' + channelName[1] + '-' + '⏱' + '-' + 'Hết-event')
+      message.channel.send('ting ting')
+      clearInterval(interval);
+      console.log('Ding!');
+    };
+  }, 60000);
+};
+client.on('message', message => {
+  let channelName = message.channel.name.split('-');
+  let messageArray = message.content.split(" ");
+  let category = message.guild.channels.find(c => c.name == "Event Timer" && c.type == "category" && c.id == 630263336612659213)
+  if (messageArray[0] == '!time') {
+    if (category) {
+      try {
+        message.channel.setName('▶' + '-' + channelName[0] + '-' + '⏱' + '-' + 'đang tính')
+        startCountdown(messageArray[1],messageArray[2], message, client)
+      } catch{
+        console.error
+      }
+    }
+  }
+})
 client.on('message', message => {
   let messageArray = message.content.split(" ");
   if (messageArray[0] == '!event') {
@@ -80,7 +113,7 @@ client.on('message', message => {
       message.guild.leave()
         .then(g => console.log(`Left the guild ${g}`))
         .catch(console.error);
-      message.channel.send('Bot không còn ở đây nữa :( ')  
+      message.channel.send('Bot không còn ở đây nữa :( ')
     }
   }
 })
