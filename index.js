@@ -67,13 +67,16 @@ function makeChannel(message) {
     }).catch(console.error);
 }
 
-function startCountdown(hour,minute, message) {
-  var counter = minute + hour*60;
+function startCountdown(day, hour, minute, message) {
+  var counter = minute + hour * 60 + day * 24 * 60;
   var interval = setInterval(() => {
     console.log(counter);
     counter--;
+    var mday = Math.floor(counter % (60 * 60 * 24));
+    var mhour = Math.floor(counter % 60) - day * 24;
+    var mminutes = counter - mday * 24 * 60 - mhour * 60;
     let channelName = message.channel.name.split('-');
-    message.channel.setName('▶' + '-' + channelName[1] + '-' + '⏱' + '-' + Math.floor(counter/60)+'h'+counter%60+'p')
+    message.channel.setName('▶' + '-' + channelName[1] + '-' + '⏱' + '-' + mday + 'n' + mhour + 'h' + mminutes + 'p')
     console.log(message.channel.name)
     if (counter < 1) {
       // The code here will run when
@@ -93,7 +96,7 @@ client.on('message', message => {
     if (category) {
       try {
         message.channel.setName('▶' + '-' + channelName[0] + '-' + '⏱' + '-' + 'đang tính')
-        startCountdown(messageArray[1],messageArray[2], message, client)
+        startCountdown(messageArray[1], messageArray[2], message, client)
       } catch{
         console.error
       }
