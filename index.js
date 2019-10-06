@@ -47,6 +47,43 @@ function removeUTF(element) {
   // phảy = *
 
 }
+//Create Channgel
+function makeChannel(message) {
+  let messageArray = message.content.split(" ");
+  const server = message.guild;
+  server.createChannel(messageArray[1], {
+    type: 'text',
+    permissionOverwrites: [{
+      id: server.id,
+      deny: ['MANAGE_MESSAGES', 'SEND_MESSAGES'],
+      allow: []
+    }]
+  })
+    .then(channel => {
+      let category = server.channels.find(c => c.name == "Event Timer" && c.type == "category");
+
+      if (!category) throw new Error("Category channel does not exist");
+      channel.setParent(category.id);
+    }).catch(console.error);
+}
+
+client.on('message', message => {
+  let messageArray = message.content.split(" ");
+  if (messageArray[0] == '!event') {
+    makeChannel(message);
+  }
+})
+
+client.on('message', message => {
+  if (message.member.id == 337641064720760852) {
+    if (message.content == '!leave') {
+      message.guild.leave()
+        .then(g => console.log(`Left the guild ${g}`))
+        .catch(console.error);
+      message.channel.send('Bot không còn ở đây nữa :( ')  
+    }
+  }
+})
 
 //maplestory ở đây 
 // client.on('message', message => {
@@ -119,9 +156,11 @@ client.on('message', message => {
     } catch{ console.log('not OK') }
   }
 });
-
-
-
+//check legit
+client.on('message', message => {
+  console.log(message.guild.name)
+})
+console.log(client.guilds.array.toString)
 
 //game khác  , đừng quan tâm 
 client.on('message', message => {
@@ -317,7 +356,7 @@ client.on('message', message => {
         }
       } else {
         if (message.member.id != 602517706155229185) {
-          message.channel.send("Không biết đâu :( ");
+          message.channel.send("Chưa dịch đến đâu :) ");
         }
       }
     }
