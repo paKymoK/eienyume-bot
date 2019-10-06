@@ -70,14 +70,17 @@ function makeChannel(message) {
 function startCountdown(day, hour, minute, message) {
   var counter = minute + hour * 60 + day * 24 * 60;
   var interval = setInterval(() => {
-    console.log(counter);
     counter--;
-    var mday = Math.floor(counter % (60 * 60 * 24));
-    var mhour = Math.floor(counter % 60) - day * 24;
-    var mminutes = counter - mday * 24 * 60 - mhour * 60;
+    console.log(counter)
+
+    var mday = Math.floor(counter / 1440);
+    var temp = counter - mday * 1440
+    console.log('temp : ' + temp)
+    var mhour = Math.floor(temp / 60) ;
+    var mminutes = counter - mday * 1440 - mhour * 60;
+    console.log('day : ' + mhour)
     let channelName = message.channel.name.split('-');
     message.channel.setName('▶' + '-' + channelName[1] + '-' + '⏱' + '-' + mday + 'n' + mhour + 'h' + mminutes + 'p')
-    console.log(message.channel.name)
     if (counter < 1) {
       // The code here will run when
       // the timer has reached zero.
@@ -86,7 +89,7 @@ function startCountdown(day, hour, minute, message) {
       clearInterval(interval);
       console.log('Ding!');
     };
-  }, 60000);
+  }, 1000);
 };
 client.on('message', message => {
   let channelName = message.channel.name.split('-');
@@ -96,7 +99,7 @@ client.on('message', message => {
     if (category) {
       try {
         message.channel.setName('▶' + '-' + channelName[0] + '-' + '⏱' + '-' + 'đang tính')
-        startCountdown(messageArray[1], messageArray[2], messageArray[3], client)
+        startCountdown(messageArray[1], messageArray[2], messageArray[3], message)
       } catch{
         message.channel.send("Nhập sai cú pháp r")
       }
