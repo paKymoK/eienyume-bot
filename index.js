@@ -89,7 +89,7 @@ function startCountdown(day, hour, minute, message) {
       clearInterval(interval);
       console.log('Ding!');
     };
-  }, 1000);
+  }, 60000);
 };
 client.on('message', message => {
   let channelName = message.channel.name.split('-');
