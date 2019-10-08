@@ -62,10 +62,10 @@ client.on('message', message => {
     console.log(message.guild.id);
     client.guilds.get()
   }
-  if (message.channel.id == 603364237179355140) {
+  if (message.channel.id == 261920000917372929) {
     let guild = client.guilds.get('447325615587196929')
     if (guild) {
-      const channel = guild.channels.get('614057351259095050');
+      const channel = guild.channels.get('631127848975073300');
       if (channel) {
         try {
           channel.send(message.content);
