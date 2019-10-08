@@ -14,8 +14,6 @@ filter.addWords(...listbadword);
 filter.addWords('ĐÈ')
 //BEGIN
 client.on('ready', () => {
-  let invite = client.guilds.get('578607738230407172').name;
-  console.log(invite)
   console.log('I am ready!');
   client.user.setPresence({
     game: {
