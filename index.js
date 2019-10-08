@@ -134,7 +134,7 @@ function makeChannel(message) {
     }]
   })
     .then(channel => {
-      let category = server.channels.find(c => c.name == "Event Timer" && c.type == "category");
+      let category = server.channels.find(c => c.id == 630263336612659213 && c.type == "category");
 
       if (!category) throw new Error("Category channel does not exist");
       channel.setParent(category.id);
