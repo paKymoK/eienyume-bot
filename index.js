@@ -62,10 +62,51 @@ client.on('message', message => {
     console.log(message.guild.id);
     client.guilds.get()
   }
+  //from announcer 
   if (message.channel.id == 261920000917372929) {
     let guild = client.guilds.get('447325615587196929')
     if (guild) {
       const channel = guild.channels.get('631127848975073300');
+      if (channel) {
+        try {
+          channel.send(message.content);
+          message.attachments.forEach(attachment => {
+            // do something with the attachment
+            const image = new Attachment(attachment.url);
+            channel.send(image)
+          });
+        } catch{
+          console.log(error)
+        }
+      }
+      else console.log("There's no channel with that ID.")
+    } else console.log(Error);
+  }
+  //update new event information
+  if (message.channel.id == 276350988317753344) {
+    let guild = client.guilds.get('447325615587196929')
+    if (guild) {
+      const channel = guild.channels.get('631129354297933826');
+      if (channel) {
+        try {
+          channel.send(message.content);
+          message.attachments.forEach(attachment => {
+            // do something with the attachment
+            const image = new Attachment(attachment.url);
+            channel.send(image)
+          });
+        } catch{
+          console.log(error)
+        }
+      }
+      else console.log("There's no channel with that ID.")
+    } else console.log(Error);
+  }
+  //update new kizuna
+  if (message.channel.id == 617333577629040679) {
+    let guild = client.guilds.get('447325615587196929')
+    if (guild) {
+      const channel = guild.channels.get('631129400426889236');
       if (channel) {
         try {
           channel.send(message.content);
