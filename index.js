@@ -166,7 +166,7 @@ function startCountdown(day, hour, minute, message) {
 client.on('message', message => {
   let channelName = message.channel.name.split('-');
   let messageArray = message.content.split(" ");
-  let category = message.guild.channels.find(c => c.name == "Event Timer" && c.type == "category" && c.id == 630263336612659213)
+  let category = message.guild.channels.find(c.type == "category" && c.id == 630263336612659213)
   if (messageArray[0] == '!time') {
     if (category) {
       try {
