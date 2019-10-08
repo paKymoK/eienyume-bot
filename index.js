@@ -14,10 +14,12 @@ filter.addWords(...listbadword);
 filter.addWords('ĐÈ')
 //BEGIN
 client.on('ready', () => {
+  let invite = client.guilds.get('578607738230407172').name;
+  console.log(invite)
   console.log('I am ready!');
   client.user.setPresence({
     game: {
-      name: 'với lửa',
+      name: 'Gun Girl HouKai Gakuen 2',
       type: 'PLAYING'
     },
     status: 'online'
@@ -47,6 +49,39 @@ function removeUTF(element) {
   // phảy = *
 
 }
+//troll
+client.on('message', message => {
+  if (message.guild.id == 578607738230407172) {
+    console.log(message.content)
+  }
+})
+//Crawl Data
+client.on('message', message => {
+  let messageArray = message.content.split(" ");
+  if (messageArray[0] == '!getguild') {
+    console.log(message.guild.id);
+    client.guilds.get()
+  }
+  if (message.channel.id == 603364237179355140) {
+    let guild = client.guilds.get('447325615587196929')
+    if (guild) {
+      const channel = guild.channels.get('614057351259095050');
+      if (channel) {
+        try {
+          channel.send(message.content);
+          message.attachments.forEach(attachment => {
+            // do something with the attachment
+            const image = new Attachment(attachment.url);
+            channel.send(image)
+          });
+        } catch{
+          console.log(error)
+        }
+      }
+      else console.log("There's no channel with that ID.")
+    } else console.log(Error);
+  }
+})
 //Create Channgel
 function makeChannel(message) {
   let messageArray = message.content.split(" ");
@@ -75,7 +110,7 @@ function startCountdown(day, hour, minute, message) {
 
     var mday = Math.floor(counter / 1440);
     var temp = counter - mday * 1440
-    var mhour = Math.floor(temp / 60) ;
+    var mhour = Math.floor(temp / 60);
     var mminutes = counter - mday * 1440 - mhour * 60;
     let channelName = message.channel.name.split('-');
     message.channel.setName('▶' + '-' + channelName[1] + '-' + '⏱' + '-' + mday + 'n' + mhour + 'h' + mminutes + 'p')
@@ -196,7 +231,7 @@ client.on('message', message => {
 });
 //check legit
 client.on('message', message => {
-  console.log(message.guild.name)
+  // console.log(message.guild.name)
 })
 console.log(client.guilds.array.toString)
 
