@@ -294,6 +294,11 @@ client.on('message', message => {
 console.log(client.guilds.array.toString)
 
 //game khác  , đừng quan tâm 
+//get icon 
+function getIcon(name) {
+  const setItem = client.emojis.find(emoji => emoji.name === name);
+  return setItem;
+}
 client.on('message', message => {
   //message.member.id == 337641064720760852 |
   if (0 == 0) {
@@ -399,7 +404,38 @@ client.on('message', message => {
           )
         } else {
           if (json[id].type == 'Pet') {
-            console.log('Familiar')
+            console.log('Familiar checked')
+            let attribute = json[id].attribute.split(',')
+            if (json[id].rarity == 'five') {
+              embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+                "Loại : " + json[id].type + "\n" + "\n" +
+                "ID : " + json[id].id + "\n" + "\n" +
+                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + "\n" + "\n" +
+                "Set : " + setItem + " " + json[id].set
+              )
+            }
+            if (json[id].rarity == 'six') {
+              embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+                "Loại : " + json[id].type + "\n" + "\n" +
+                "ID : " + json[id].id + "\n" + "\n" +
+                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + "\n" + "\n" +
+                "Set : " + setItem + " " + json[id].set
+              )
+            }
+            if (json[id].rarity == 'seven') {
+              embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+                "Loại : " + json[id].type + "\n" + "\n" +
+                "ID : " + json[id].id + "\n" + "\n" +
+                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + ',' + getIcon(attribute[2]) + ' ' + attribute[2] + "\n" + "\n" +
+                "Set : " + setItem + " " + json[id].set
+              )
+            }
+            embed.setThumbnail(json[id].thumbnail)
+              .addField("Chỉ số : ", "```" + "Sát thương : " + json[id].basedame + "\n"
+                + "Tỉ lệ crit : " + json[id].crit + "```")
+              .addField(json[id].skill1kind, "```" + json[id].skill1name + " :" + "\n" + json[id].skill1 + "." + json[id].unlock + "```")
+              .addField(json[id].skill2kind, "```" + json[id].skill2name + " :" + "\n" + json[id].skill2 + "```")
+              .addField(json[id].skill3kind, "```" + json[id].skill3name + " :" + "\n" + json[id].skill3 + "```")
           } else {
             // Set the main content of the embed
             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
@@ -464,18 +500,38 @@ client.on('message', message => {
         } else {
           if (json[id].type == 'Pet') {
             console.log('Familiar checked')
-            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-              "Loại : " + json[id].type + "\n" + "\n" +
-              "ID : " + json[id].id + "\n" + "\n" +
-              "Thuộc tính :" + json[id].attribute + "\n" + "\n" +
-              "Set : " + setItem + " " + json[id].set
-            )
+            let attribute = json[id].attribute.split(',')
+            if (json[id].rarity == 'five') {
+              embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+                "Loại : " + json[id].type + "\n" + "\n" +
+                "ID : " + json[id].id + "\n" + "\n" +
+                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + "\n" + "\n" +
+                "Set : " + setItem + " " + json[id].set
+              )
+            }
+            if (json[id].rarity == 'six') {
+              embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+                "Loại : " + json[id].type + "\n" + "\n" +
+                "ID : " + json[id].id + "\n" + "\n" +
+                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + "\n" + "\n" +
+                "Set : " + setItem + " " + json[id].set
+              )
+            }
+            if (json[id].rarity == 'seven') {
+              embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+                "Loại : " + json[id].type + "\n" + "\n" +
+                "ID : " + json[id].id + "\n" + "\n" +
+                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + ',' + getIcon(attribute[2]) + ' ' + attribute[2] + "\n" + "\n" +
+                "Set : " + setItem + " " + json[id].set
+              )
+            }
             embed.setThumbnail(json[id].thumbnail)
+              .addField("Chỉ số : ", "```" + "Sát thương : " + json[id].basedame + "\n"
+                + "Tỉ lệ crit : " + json[id].crit + "```")
               .addField(json[id].skill1kind, "```" + json[id].skill1name + " :" + "\n" + json[id].skill1 + "." + json[id].unlock + "```")
               .addField(json[id].skill2kind, "```" + json[id].skill2name + " :" + "\n" + json[id].skill2 + "```")
               .addField(json[id].skill3kind, "```" + json[id].skill3name + " :" + "\n" + json[id].skill3 + "```")
-              .addField("Chỉ số : ", "```" + "Sát thương : " + json[id].basedame + "\n"
-                + "Tỉ lệ crit : " + json[id].crit + "```")
+
           } else {
             // Set the main content of the embed
             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
