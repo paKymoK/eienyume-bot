@@ -24,10 +24,15 @@ client.on('ready', () => {
   })
 });
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.name === 'new-comers-board');
+  const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
   if (!channel) return;
-  channel.send(`Welcome to the server, ${member}`);
+  channel.send(`${member} đã đến đêy`);
 });
+client.on('guildMemberRemove', member => {
+  const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
+  if (!channel) return;
+  channel.send(`${member} đã đi rồi ông giáo ơi :(`);
+})
 //ẪẬẮẰẲẴẶẸẺẼỀỀỂ ưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ
 function removeUTF(element) {
   return element.replace(/đ/g, 'd-').replace(/Đ/g, 'D-')
@@ -47,10 +52,21 @@ function removeUTF(element) {
   // phảy = *
 
 }
-//check role
+//check role and change presence
 client.on('message', message => {
-  let role = message.member.roles.forEach(role =>{
-    console.log(role.name)
+  let messageArray = message.content.split(" ");
+  message.member.roles.forEach(role => {
+    if (role.id == 603875432214822913) {
+      if (messageArray[0] == '!game') {
+        client.user.setPresence({
+          game: {
+            name: messageArray[1],
+            type: 'PLAYING'
+          },
+          status: 'online'
+        })
+      }
+    }
   })
 })
 //Crawl Data
@@ -142,25 +158,29 @@ function makeChannel(message) {
 }
 
 function startCountdown(day, hour, minute, message) {
-  var counter = Number(minute) + Number(hour) * 60 + Number(day) * 24 * 60;
-  var interval = setInterval(() => {
-    counter--;
-    console.log(counter)
-    var mday = Math.floor(counter / 1440);
-    var temp = counter - mday * 1440
-    var mhour = Math.floor(temp / 60);
-    var mminutes = counter - mday * 1440 - mhour * 60;
-    let channelName = message.channel.name.split('-');
-    message.channel.setName('▶' + '-' + channelName[1] + '-' + '⏱' + '-' + mday + 'n' + mhour + 'h' + mminutes + 'p')
-    if (counter < 1) {
-      // The code here will run when
-      // the timer has reached zero.
-      message.channel.setName('⏸' + '-' + channelName[1] + '-' + '⏱' + '-' + 'Hết-event')
-      message.channel.send('ting ting')
-      clearInterval(interval);
-      console.log('Ding!');
-    };
-  }, 60000);
+  try {
+    var counter = Number(minute) + Number(hour) * 60 + Number(day) * 24 * 60;
+    var interval = setInterval(() => {
+      counter--;
+      console.log(counter)
+      var mday = Math.floor(counter / 1440);
+      var temp = counter - mday * 1440
+      var mhour = Math.floor(temp / 60);
+      var mminutes = counter - mday * 1440 - mhour * 60;
+      let channelName = message.channel.name.split('-');
+      message.channel.setName('▶' + '-' + channelName[1] + '-' + '⏱' + '-' + mday + 'n' + mhour + 'h' + mminutes + 'p')
+      if (counter < 1) {
+        // The code here will run when
+        // the timer has reached zero.
+        message.channel.setName('⏸' + '-' + channelName[1] + '-' + '⏱' + '-' + 'Hết-event')
+        message.channel.send('ting ting')
+        clearInterval(interval);
+        console.log('Ding!');
+      };
+    }, 60000);
+  } catch {
+    console.log(Error)
+  }
 };
 client.on('message', message => {
   let channelName = message.channel.name.split('-');
@@ -378,37 +398,44 @@ client.on('message', message => {
             "Set : " + setItem + " " + json[id].set
           )
         } else {
-          // Set the main content of the embed
-          embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-            "Loại : " + json[id].type + "\n" + "\n" +
-            "ID : " + json[id].id + "\n" + "\n" +
-            "Thuộc tính :" + attribute + "\n" + "\n" +
-            "Set : " + setItem + " " + json[id].set
-          )
-        }
-        embed.setThumbnail(json[id].thumbnail)
-          .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
-          .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
-        if (json[id].type === "Áo") {
-          embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-            "Máu cơ bản : " + json[id].basehp + "\n" + "```")
-        } else {
-          if (json[id].type === "Huy hiệu") {
-            embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
+          if (json[id].type == 'Familiar') {
+            console.log('Familiar')
           } else {
-            //weapon
-            embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-              "Sát thương : " + json[id].basedame + "\n"
-              + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
-              + "Đạn : " + json[id].ammo + "```")
+            // Set the main content of the embed
+            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+              "Loại : " + json[id].type + "\n" + "\n" +
+              "ID : " + json[id].id + "\n" + "\n" +
+              "Thuộc tính :" + attribute + "\n" + "\n" +
+              "Set : " + setItem + " " + json[id].set
+            )
+
+            embed.setThumbnail(json[id].thumbnail)
+              .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
+              .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
+            if (json[id].type == "Áo" && json[id].type != 'Familiar') {
+              embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
+                "Máu cơ bản : " + json[id].basehp + "\n" + "```")
+            } else {
+              if (json[id].type == "Huy hiệu" && json[id].type != 'Familiar') {
+                embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
+              } else {
+                //weapon
+                if (json[id].type != 'Familiar') {
+                  embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
+                    "Sát thương : " + json[id].basedame + "\n"
+                    + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
+                    + "Đạn : " + json[id].ammo + "```")
+                }
+              }
+            }
+            if (json[id].moe === "Có") {
+              embed.setImage(json[id].linkmoe)
+            }
+            embed.setColor(0xFF0000)
           }
-        }
-        if (json[id].moe === "Có") {
-          embed.setImage(json[id].linkmoe)
-        }
-        embed.setColor(0xFF0000)
-        if (message.member.id != 602517706155229185) {
-          message.channel.send(embed);
+          if (message.member.id != 602517706155229185) {
+            message.channel.send(embed);
+          }
         }
       }
     }
@@ -433,37 +460,50 @@ client.on('message', message => {
             "Set : " + setItem + " " + json[id].set
           )
         } else {
-          // Set the main content of the embed
-          embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-            "Loại : " + json[id].type + "\n" + "\n" +
-            "ID : " + json[id].id + "\n" + "\n" +
-            "Thuộc tính :" + attribute + "\n" + "\n" +
-            "Set : " + setItem + " " + json[id].set
-          )
-        }
-        embed.setThumbnail(json[id].thumbnail)
-          .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
-          .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
-        if (json[id].type === "Áo") {
-          embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-            "Máu cơ bản : " + json[id].basehp + "\n" + "```")
-        } else {
-          if (json[id].type === "Huy hiệu") {
-            embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
+          if (json[id].type == 'Familiar') {
+            console.log('Familiar checked')
+            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+              "Loại : " + json[id].type + "\n" + "\n" +
+              "ID : " + json[id].id + "\n" + "\n" +
+              "Thuộc tính :" + attribute + "\n" + "\n" +
+              "Set : " + setItem + " " + json[id].set
+            )
           } else {
-            //weapon
-            embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-              "Sát thương : " + json[id].basedame + "\n"
-              + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
-              + "Đạn : " + json[id].ammo + "```")
+            // Set the main content of the embed
+            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+              "Loại : " + json[id].type + "\n" + "\n" +
+              "ID : " + json[id].id + "\n" + "\n" +
+              "Thuộc tính :" + attribute + "\n" + "\n" +
+              "Set : " + setItem + " " + json[id].set
+            )
+            embed.setThumbnail(json[id].thumbnail)
+              .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
+              .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
+            if (json[id].type === "Áo" && json[id].type != 'Familiar') {
+              embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
+                "Máu cơ bản : " + json[id].basehp + "\n" + "```")
+            } else {
+              if (json[id].type === "Huy hiệu" && json[id].type != 'Familiar') {
+                embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
+              } else {
+                if (json[id].type != 'Familiar') {
+                  //weapon
+                  embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
+                    "Sát thương : " + json[id].basedame + "\n"
+                    + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
+                    + "Đạn : " + json[id].ammo + "```")
+                }
+              }
+            }
+
+            if (json[id].moe === "Có") {
+              embed.setImage(json[id].linkmoe)
+            }
+            embed.setColor(0xFF0000)
           }
-        }
-        if (json[id].moe === "Có") {
-          embed.setImage(json[id].linkmoe)
-        }
-        embed.setColor(0xFF0000)
-        if (message.member.id != 602517706155229185) {
-          message.channel.send(embed);
+          if (message.member.id != 602517706155229185) {
+            message.channel.send(embed);
+          }
         }
       } else {
         if (message.member.id != 602517706155229185) {

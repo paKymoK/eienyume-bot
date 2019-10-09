@@ -2682,6 +2682,24 @@
         "linkmoe": ""
     },
     {
+        "name": "Infinite Pursuit",
+        "rarity": "six",
+        "thumbnail": "https://cdn1.iconfinder.com/data/icons/ui-set-6/100/Question_Mark-512.png",
+        "type": "Familiar",
+        "id": "3194,3195,3196",
+        "attribute":"Mecha,Innovate",
+        "set": "Pet",
+        "skill1name": "`Ougi` - Biochemical Energy Cannon",
+        "skill1": "Bắn 1 viên đạn về phía trước , gây 1500% (2500%) dame ",
+        "unlock":"Có 60% tỉ lệ biến kẻ địch thành cừu trong 3 giây",
+        "skill2name": "`Inherit` - Target Locked",
+        "skill2": "Khóa kẻ địch và liên tục tấn công vào chúng , tăng dame gây ra lên mục tiêu thêm 25% (50%) mỗi giây . Tối đa 6 giây",
+        "skill3name": "`Inherit` - Fight Oppression",
+        "skill3": "Với mỗi 10% máu người chơi mất , tăng dame cho pet thêm 35%( 70% )",
+        "basedame": "2515",
+        "crit": "40%"
+    },
+    {
         "name": "",
         "rarity": "six",
         "thumbnail": "",
