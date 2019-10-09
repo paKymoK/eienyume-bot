@@ -398,7 +398,7 @@ client.on('message', message => {
             "Set : " + setItem + " " + json[id].set
           )
         } else {
-          if (json[id].type == 'Familiar') {
+          if (json[id].type == 'Pet') {
             console.log('Familiar')
           } else {
             // Set the main content of the embed
@@ -412,15 +412,15 @@ client.on('message', message => {
             embed.setThumbnail(json[id].thumbnail)
               .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
               .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
-            if (json[id].type == "Áo" && json[id].type != 'Familiar') {
+            if (json[id].type == "Áo" && json[id].type != 'Pet') {
               embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
                 "Máu cơ bản : " + json[id].basehp + "\n" + "```")
             } else {
-              if (json[id].type == "Huy hiệu" && json[id].type != 'Familiar') {
+              if (json[id].type == "Huy hiệu" && json[id].type != 'Pet') {
                 embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
               } else {
                 try {//weapon
-                  if (json[id].type != 'Familiar') {
+                  if (json[id].type != 'Pet') {
                     embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
                       "Sát thương : " + json[id].basedame + "\n"
                       + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
@@ -462,14 +462,20 @@ client.on('message', message => {
             "Set : " + setItem + " " + json[id].set
           )
         } else {
-          if (json[id].type == 'Familiar') {
+          if (json[id].type == 'Pet') {
             console.log('Familiar checked')
             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
               "Loại : " + json[id].type + "\n" + "\n" +
               "ID : " + json[id].id + "\n" + "\n" +
-              "Thuộc tính :" + attribute + "\n" + "\n" +
+              "Thuộc tính :" + json[id].attribute + "\n" + "\n" +
               "Set : " + setItem + " " + json[id].set
             )
+            embed.setThumbnail(json[id].thumbnail)
+              .addField(json[id].skill1kind, "```" + json[id].skill1name + " :" + "\n" + json[id].skill1 + "```")
+              .addField(json[id].skill2kind, "```" + json[id].skill2name + " :" + "\n" + json[id].skill2 + "```")
+              .addField(json[id].skill3kind, "```" + json[id].skill3name + " :" + "\n" + json[id].skill3 + "```")
+              .addField("Chỉ số : ", "```" + "Sát thương : " + json[id].basedame + "\n"
+                + "Tỉ lệ crit : " + json[id].crit + "```")
           } else {
             // Set the main content of the embed
             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
@@ -481,14 +487,14 @@ client.on('message', message => {
             embed.setThumbnail(json[id].thumbnail)
               .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
               .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
-            if (json[id].type === "Áo" && json[id].type != 'Familiar') {
+            if (json[id].type === "Áo" && json[id].type != 'Pet') {
               embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
                 "Máu cơ bản : " + json[id].basehp + "\n" + "```")
             } else {
-              if (json[id].type === "Huy hiệu" && json[id].type != 'Familiar') {
+              if (json[id].type === "Huy hiệu" && json[id].type != 'Pet') {
                 embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
               } else {
-                if (json[id].type != 'Familiar') {
+                if (json[id].type != 'Pet') {
                   //weapon
                   embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
                     "Sát thương : " + json[id].basedame + "\n"
@@ -515,5 +521,6 @@ client.on('message', message => {
     }
   }
 });
+//https://cdn1.iconfinder.com/data/icons/ui-set-6/100/Question_Mark-512.png
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.MY_API_KEY);
