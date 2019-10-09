@@ -471,7 +471,7 @@ client.on('message', message => {
               "Set : " + setItem + " " + json[id].set
             )
             embed.setThumbnail(json[id].thumbnail)
-              .addField(json[id].skill1kind, "```" + json[id].skill1name + " :" + "\n" + json[id].skill1 + "```")
+              .addField(json[id].skill1kind, "```" + json[id].skill1name + " :" + "\n" + json[id].skill1 + "." + json[id].unlock + "```")
               .addField(json[id].skill2kind, "```" + json[id].skill2name + " :" + "\n" + json[id].skill2 + "```")
               .addField(json[id].skill3kind, "```" + json[id].skill3name + " :" + "\n" + json[id].skill3 + "```")
               .addField("Chỉ số : ", "```" + "Sát thương : " + json[id].basedame + "\n"
