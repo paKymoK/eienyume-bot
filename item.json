@@ -2903,6 +2903,26 @@
         "linkmoe": ""
     },
     {
+        "name": "Sword of Sadness",
+        "rarity": "six",
+        "thumbnail": "https://cdn.discordapp.com/attachments/614057351259095050/631431503154249748/1963.png",
+        "type": "Vũ khí - Shotgun - Đơn mục tiêu",
+        "id": "2319,2320",
+        "attribute":"Physical",
+        "set": "Celtic",
+        "skill1name": "Love Lock",
+        "skill1": "Tấn công thành công liên tục 1 kẻ địch sẽ tăng cho vũ khí này 150%(200%) dame mỗi lần , chỉ có 1 kẻ địch có thể mang hiệu ứng này ",
+        "skill2name": "Sword chipping",
+        "skill2": "Tấn công kẻ địch không bị hiệu ứng từ `effect 1` sẽ gây 100%(125%) dame lên kẻ địch đang bị dính `effect 1`",
+        "cost": "20",
+        "ammo": "34",
+        "basedame": "2536",
+        "attackspeed": "1.7",
+        "basehp": "",
+        "moe": "Không",
+        "linkmoe": ""
+    },
+    {
         "name": "",
         "rarity": "six",
         "thumbnail": "",
