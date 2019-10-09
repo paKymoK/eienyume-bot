@@ -47,11 +47,11 @@ function removeUTF(element) {
   // phảy = *
 
 }
-//troll
+//check role
 client.on('message', message => {
-  if (message.guild.id == 578607738230407172) {
-    console.log(message.content)
-  }
+  let role = message.member.roles.forEach(role =>{
+    console.log(role.name)
+  })
 })
 //Crawl Data
 client.on('message', message => {
@@ -146,7 +146,6 @@ function startCountdown(day, hour, minute, message) {
   var interval = setInterval(() => {
     counter--;
     console.log(counter)
-
     var mday = Math.floor(counter / 1440);
     var temp = counter - mday * 1440
     var mhour = Math.floor(temp / 60);
@@ -167,7 +166,7 @@ client.on('message', message => {
   let channelName = message.channel.name.split('-');
   let messageArray = message.content.split(" ");
   let category = message.guild.channels.find(c => c.type == "category" && c.id == 630263336612659213)
-  if (messageArray[0] == '!time') {
+  if (messageArray[0] == '!time' && message.member.id == 337641064720760852) {
     if (category) {
       try {
         message.channel.setName('▶' + '-' + channelName[0] + '-' + '⏱' + '-' + 'đang tính')
@@ -181,7 +180,7 @@ client.on('message', message => {
 })
 client.on('message', message => {
   let messageArray = message.content.split(" ");
-  if (messageArray[0] == '!event') {
+  if (messageArray[0] == '!event' && message.member.id == 337641064720760852) {
     makeChannel(message);
   }
 })
