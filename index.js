@@ -419,13 +419,15 @@ client.on('message', message => {
               if (json[id].type == "Huy hiệu" && json[id].type != 'Familiar') {
                 embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
               } else {
-                //weapon
-                if (json[id].type != 'Familiar') {
-                  embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-                    "Sát thương : " + json[id].basedame + "\n"
-                    + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
-                    + "Đạn : " + json[id].ammo + "```")
-                }
+                try {//weapon
+                  if (json[id].type != 'Familiar') {
+                    embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
+                      "Sát thương : " + json[id].basedame + "\n"
+                      + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
+                      + "Đạn : " + json[id].ammo + "```")
+                  }
+                } catch{ console.log(Error) }
+
               }
             }
             if (json[id].moe === "Có") {
