@@ -25,6 +25,7 @@ client.on('ready', () => {
 });
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
+  member.addRole('631831652070326282');
   if (!channel) return;
   channel.send(`${member} đã đến đêy`);
 });
@@ -52,6 +53,15 @@ function removeUTF(element) {
   // phảy = *
 
 }
+//list icon
+client.on('message', message => {
+  let messageArray = message.content.split(" ");
+  if (messageArray[0] == '!set') {
+    json.forEach(function (item, index, array) {
+      console.log(item.set + " " + index)
+    })
+  }
+})
 //check role and change presence
 client.on('message', message => {
   let messageArray = message.content.split(" ");
