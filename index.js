@@ -311,7 +311,7 @@ function getIcon(name) {
 }
 client.on('message', message => {
   //message.member.id == 337641064720760852 |
-  if (message.member.guild.id == 447325615587196929) {
+  if (message.member.guild.id == 447325615587196929 || message.member.id == 337641064720760852) {
     let messageArray = message.content.split(" ");
     var searchString = "";
     for (var i = 1; i < messageArray.length; i++) {
