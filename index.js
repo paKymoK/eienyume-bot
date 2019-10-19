@@ -23,6 +23,16 @@ client.on('ready', () => {
     status: 'online'
   })
 });
+//get emoji
+client.on('message', message => {
+  let messageArray = message.content.split(" ");
+  const setItem = client.emojis.find(emoji => emoji.name === "cowboyPepe");
+  if (messageArray == '!emo') {
+    message.delete();
+    message.channel.send(setItem + "");
+  }
+});
+//new member
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
   member.addRole('631831652070326282');
