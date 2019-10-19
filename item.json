@@ -3910,6 +3910,27 @@
         "crit": "51%"
     },
     {
+        "name": "Doran",
+        "rarity": "six",
+        "thumbnail": "https://cdn.discordapp.com/attachments/629719862138241075/634031892617756703/1826.png",
+        "type": "Pet",
+        "id": "2299,2300,2301",
+        "attribute": "Tsundere,Hidden",
+        "set": "Familiar",
+        "skill1kind": "`Ougi`",
+        "skill1name": "Happy Dream・S",
+        "skill1": "Giảm 40%(80%) tốc chạy và 40%(80%) dame của kể địch và tăng 35%(70%) dame cho người chơi ",
+        "unlock": "",
+        "skill2kind": "`Handle`",
+        "skill2name": "Ah~",
+        "skill2": "Ném 1 cái gói ra , gây 200%(400%) dame lên kẻ địch ở phía trước",
+        "skill3kind": "`Inherit`",
+        "skill3name": "Hibernation",
+        "skill3": "Tăng tồng dame lên 0.1% và tốc chạy lên 0.1% với mỗi 1 đồ chứa trong inventory , tính tối đa 300(550) đồ",
+        "basedame": "2291",
+        "crit": "49%"
+    },
+    {
         "name": "",
         "rarity": "six",
         "thumbnail": "",
