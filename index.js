@@ -277,10 +277,10 @@ client.on('message', message => {
         catch{ }
       }
     }
-    if (messageArray[0] == '!bot') {
+    if (messageArray[0] == '!bot' && message.member.id == 337641064720760852) {
       humandroid.push(message.member.id);
     }
-    if (messageArray[0] == '!notbot') {
+    if (messageArray[0] == '!notbot' && message.member.id == 337641064720760852) {
       var pos = humandroid.indexOf(message.member.id);
       humandroid.splice(pos, 1);
     }
