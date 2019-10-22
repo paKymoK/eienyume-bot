@@ -605,6 +605,7 @@ client.on('message', async message => {
 
   if (message.content.startsWith(`${prefix}play`)) {
     execute(message, serverQueue);
+    message.delete();
     return;
   } else if (message.content.startsWith(`${prefix}skip`)) {
     skip(message, serverQueue);
