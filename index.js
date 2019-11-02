@@ -28,9 +28,11 @@ client.on('ready', () => {
 //new member
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
-  member.addRole('631831652070326282');
-  if (!channel) return;
-  channel.send(`${member} đã đến đêy`);
+  if (member.guild.id == 447325615587196929) {
+    member.addRole('631831652070326282');
+    if (!channel) return;
+    channel.send(`${member} đã đến đêy`);
+  }
 });
 client.on('guildMemberRemove', member => {
   const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
@@ -478,7 +480,7 @@ client.on('message', message => {
                       + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
                       + "Đạn : " + json[id].ammo + "```")
                   }
-                } catch{ 
+                } catch{
                   // console.log(Error) 
                 }
 
