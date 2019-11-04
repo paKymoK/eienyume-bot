@@ -19,7 +19,7 @@ client.on('ready', () => {
   console.log('I am ready!');
   client.user.setPresence({
     game: {
-      name: 'Gun Girl HouKai Gakuen 2',
+      name: 'Gun Girl - HouKai Gakuen ',
       type: 'PLAYING'
     },
     status: 'online'
@@ -109,7 +109,7 @@ client.on('message', message => {
             const image = new Attachment(attachment.url);
             channel.send(image)
           });
-        } catch{
+        } catch{ 
           console.log(error)
         }
       }

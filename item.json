@@ -4272,16 +4272,16 @@
         "set": "Familiar",
         "skill1kind": "`Ougi`",
         "skill1name": "See through them all",
-        "skill1": "",
+        "skill1": "Dịch chuyển và tấn công trong 15(30) giây , mỗi hit tăng 3% dame trong 20 giây sau khi ougi hoàn thành",
         "unlock": "",
         "skill2kind": "`Handle`",
-        "skill2name": "",
-        "skill2": "",
+        "skill2name": "Rocket punch",
+        "skill2": "Đập xuống đất , gây 250%(500%) AOE dame , gây thêm 50%(100%) và đẩy lùi kẻ địch trong phạm vi 300",
         "skill3kind": "`Inherit`",
-        "skill3name": "",
-        "skill3": "",
-        "basedame": "",
-        "crit": ""
+        "skill3name": "Preparation",
+        "skill3": "Khi không sử dụng vũ khí , nhận thêm 15%(30%) dame vật lý , lửa , năng lượng ,tối đa 120% . reset sau khi tấn công hoặc sau 10 giây",
+        "basedame": "1965",
+        "crit": "57%"
     },
     {
         "name": "",
