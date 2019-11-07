@@ -109,7 +109,7 @@ client.on('message', message => {
             const image = new Attachment(attachment.url);
             channel.send(image)
           });
-        } catch{ 
+        } catch{
           console.log(error)
         }
       }
@@ -323,24 +323,25 @@ client.on('message', message => {
   if (message.member.guild.id == 447325615587196929 || message.member.id == 337641064720760852) {
     let messageArray = message.content.split(" ");
     var searchString = "";
-    for (var i = 1; i < messageArray.length; i++) {
+    for (var i = 0; i < messageArray.length; i++) {
       searchString = searchString + messageArray[i];
       searchString = searchString.toLowerCase();
       // console.log(searchString);
     }
+    searchString = searchString.substr(1);
     var id = -1;
     var count = 0;
     var idlist = [];
     function logArrayElements(element, index) {
       let idArray = element.id.split(",");
       idArray.forEach(elements => {
-        if (elements === messageArray[1]) {
+        if (elements === searchString) {
           id = index;
-          // console.log(index);
         }
       });
     }
     function logArrayElementsByName(element, index) {
+
       let idArray = element.name.toLowerCase().split(" ");
       var noSpace = "";
       for (var i = 0; i < idArray.length; i++) {
@@ -352,6 +353,8 @@ client.on('message', message => {
         idlist.push(id);
       }
     }
+
+
     function getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
     }
@@ -373,10 +376,12 @@ client.on('message', message => {
       }
       a = -1;
     }
+    //check is number or string
     // tìm theo tên
-    if (messageArray[0] === "!tên") {
+
+    if (message.content.charAt(0) === "!" && !/^\d+$/.test(searchString)) {
       json.forEach(logArrayElementsByName);
-      if (count == 0) {
+      if (count == 0 ) {
         if (message.member.id != 602517706155229185) {
           message.channel.send('Không có món nào tên như nềy cả !!! ')
         }
@@ -498,7 +503,7 @@ client.on('message', message => {
       }
     }
     // tìm theo id
-    if (messageArray[0] === "!id") {
+    if (message.content.charAt(0) === "!" && /^\d+$/.test(searchString)) {
       json.forEach(logArrayElements);
       if (id != -1) {
         const setItem = client.emojis.find(emoji => emoji.name === json[id].set);
