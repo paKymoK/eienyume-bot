@@ -6,20 +6,13 @@ const client = new Discord.Client();
 const permissions = new Discord.Permissions(8);
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
-//bad word
-var badword = JSON.parse(fs.readFileSync('./badword.json', 'utf8'));
-var listbadword = badword.bad.split(",");
-var filter = new Filter();
-const queue = new Map();
-const ytdl = require('ytdl-core');
-filter.addWords(...listbadword);
-filter.addWords('ĐÈ')
+
 //BEGIN
 client.on('ready', () => {
   console.log('I am ready!');
   client.user.setPresence({
     game: {
-      name: 'Gun Girl - HouKai Gakuen ',
+      name: 'Gun Girl - HouKai Gakuen',
       type: 'PLAYING'
     },
     status: 'online'
@@ -39,25 +32,6 @@ client.on('guildMemberRemove', member => {
   if (!channel) return;
   channel.send(`${member} đã đi rồi ông giáo ơi :(`);
 })
-//ẪẬẮẰẲẴẶẸẺẼỀỀỂ ưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ
-function removeUTF(element) {
-  return element.replace(/đ/g, 'd-').replace(/Đ/g, 'D-')
-    .replace(/ù/g, 'u`').replace(/Ù/g, 'U`')
-    .replace(/À/g, 'A`').replace(/Á/g, 'A#').replace(/Â/g, 'A^')
-    .replace(/Ã/g, 'A~').replace(/È/g, 'E`').replace(/É/g, 'E#').replace(/Ê/g, 'E^').replace(/Ì/g, 'I`')
-    .replace(/Í/g, 'I#').replace(/Ò/g, 'O`').replace(/Ó/g, 'O#').replace(/Ô/g, 'O^').replace(/Õ/g, 'O~')
-    .replace(/Ú/g, 'U#').replace(/Ă/g, 'A$').replace(/Ĩ/g, 'I~').replace(/Ũ/g, 'Ũ').replace(/Ơ/g, 'O*')
-    .replace(/à/g, 'a`').replace(/á/g, 'a#').replace(/â/g, 'a^').replace(/ã/g, 'a~').replace(/è/g, 'e`')
-    .replace(/é/g, 'e#').replace(/ê/g, 'e^').replace(/ì/g, 'i`').replace(/í/g, 'i#').replace(/ò/g, 'o`')
-    .replace(/ó/g, 'o*').replace(/ô/g, 'o^').replace(/õ/g, 'o~').replace(/ú/g, 'u#').replace(/ă/g, 'aw')
-    .replace(/ĩ/g, 'i~').replace(/ũ/g, 'U~').replace(/ơ/g, 'o*').replace(/Ư/g, 'U*').replace(/Ă/g, 'Aw')
-    .replace(/Ạ/g, 'A.').replace(/Ả/g, 'A?').replace(/Ã/g, 'A~').replace(/Ầ/g, 'A^`').replace(/Ấ/g, 'A^*')
-    .replace(/Ẫ/g, 'A^~').replace(/Ậ/g, 'A^.').replace(/Ằ/g, 'Aw`').replace(/Ắ/g, 'Aw*').replace(/Ẵ/g, 'Aw~')
-  // huyền = `
-  // sắc = #
-  // phảy = *
-
-}
 //list icon
 client.on('message', message => {
   let messageArray = message.content.split(" ");
@@ -235,24 +209,6 @@ client.on('message', message => {
   }
 })
 
-//maplestory ở đây 
-// client.on('message', message => {
-//   console.log(removeUTF(message.content)+'x')
-//   console.log(filter.isProfane(removeUTF(message.content)));
-
-// console.log(listbadword);
-// let messageArray = message.content.split(" ");
-// messageArray.every(function (element) {
-//   listbadword.forEach(elements => {
-//     if (element.toLowerCase() == elements.toLowerCase()) {
-//       message.member.send('Nói ``' + elements + '`` là hư')
-//       return false;
-//     }
-//   });
-
-//   return true;
-// })
-// });
 const humandroid = [];
 client.on('message', message => {
   if (message.channel.id != 598353995513462785) {
@@ -353,28 +309,8 @@ client.on('message', message => {
         idlist.push(id);
       }
     }
-
-
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
     if (messageArray[0] === "!tênthật") {
       message.channel.send(message.member.user.tag);
-    }
-    if (messageArray[0] === "!gacha") {
-      var a = getRandomInt(100);
-      console.log(a)
-
-      if ((0 < a) && (a < 15)) {
-        message.channel.send("màu Vàng");
-      }
-      if (a == 0) {
-        message.channel.send("màu Hồng");
-      }
-      if (a >= 15) {
-        message.channel.send("màu Xanh");
-      }
-      a = -1;
     }
     //check is number or string
     // tìm theo tên
