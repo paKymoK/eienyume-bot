@@ -77,20 +77,22 @@ client.on('message', message => {
 })
 //check role and change presence
 client.on('message', message => {
-  let messageArray = message.content.split(" ");
-  message.member.roles.forEach(role => {
-    if (role.id == 603875432214822913) {
-      if (messageArray[0] == '!game') {
-        client.user.setPresence({
-          game: {
-            name: messageArray[1],
-            type: 'PLAYING'
-          },
-          status: 'online'
-        })
+  try {
+    let messageArray = message.content.split(" ");
+    message.member.roles.forEach(role => {
+      if (role.id == 603875432214822913) {
+        if (messageArray[0] == '!game') {
+          client.user.setPresence({
+            game: {
+              name: messageArray[1],
+              type: 'PLAYING'
+            },
+            status: 'online'
+          })
+        }
       }
-    }
-  })
+    })
+  } catch{ }
 })
 //Crawl Data
 client.on('message', message => {
@@ -315,12 +317,37 @@ client.on('message', message => {
     var id = -1;
     var count = 0;
     var idlist = [];
-    var checkIdList = []
+    var checkIdList500 = []
+    var checkIdList1000 = []
+    var checkIdList1500 = []
+    var checkIdList2000 = []
+    var checkIdList2500 = []
+    var checkIdList3000 = []
+    var checkIdList3500 = []
+
     function logArrayElements(element, index) {
       let idArray = element.id.split(",");
       idArray.forEach(elements => {
-        if (elements != "") {
-          checkIdList.push(Number(elements));
+        if (elements != "" && Number(elements) < 500) {
+          checkIdList500.push(Number(elements));
+        }
+        if (elements != "" && Number(elements) > 500 && Number(elements) < 1000) {
+          checkIdList1000.push(Number(elements));
+        }
+        if (elements != "" && Number(elements) > 1000 && Number(elements) < 1500) {
+          checkIdList1500.push(Number(elements));
+        }
+        if (elements != "" && Number(elements) > 1500 && Number(elements) < 2000) {
+          checkIdList2000.push(Number(elements));
+        }
+        if (elements != "" && Number(elements) > 2000 && Number(elements) < 2500) {
+          checkIdList2500.push(Number(elements));
+        }
+        if (elements != "" && Number(elements) > 2500 && Number(elements) < 3000) {
+          checkIdList3000.push(Number(elements));
+        }
+        if (elements != "" && Number(elements) > 3000 && Number(elements) < 3500) {
+          checkIdList3500.push(Number(elements));
         }
         if (elements === searchString) {
           id = index;
@@ -341,8 +368,30 @@ client.on('message', message => {
       }
     }
     //List ID
-    if (messageArray[0] == ".list") {
-      message.author.send("Danh sách item hiện tại.", { files: ["./item.json"] });
+    if (messageArray[0] == ".list" && /^\d+$/.test(messageArray[1])) {
+      // message.author.send("Danh sách item hiện tại.", { files: ["./item.json"] });
+      json.forEach(logArrayElements);
+      if (Number(messageArray[1] <= 500)) {
+        message.channel.send(checkIdList500);
+      }
+      if (Number(messageArray[1] > 500) && Number(messageArray[1] <= 1000)) {
+        message.channel.send(checkIdList1000);
+      }
+      if (Number(messageArray[1] > 1000) && Number(messageArray[1] <= 1500)) {
+        message.channel.send(checkIdList1500);
+      }
+      if (Number(messageArray[1] > 1500) && Number(messageArray[1] <= 2000)) {
+        message.channel.send(checkIdList2000);
+      }
+      if (Number(messageArray[1] > 2000) && Number(messageArray[1] <= 2500)) {
+        message.channel.send(checkIdList2500);
+      }
+      if (Number(messageArray[1] > 2500) && Number(messageArray[1] <= 3000)) {
+        message.channel.send(checkIdList3000);
+      }
+      if (Number(messageArray[1] > 3000) && Number(messageArray[1] <= 3500)) {
+        message.channel.send(checkIdList3500);
+      }
     }
     //check is number or string
     // tìm theo tên
