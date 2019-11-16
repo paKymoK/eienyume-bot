@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
-const Filter = require('bad-words');
 require('dotenv').config();
 const { Client, Attachment, RichEmbed, Permissions } = require('discord.js');
 const client = new Discord.Client();
 const permissions = new Discord.Permissions(8);
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
+var skillelite = JSON.parse(fs.readFileSync('./skillelite.json', 'utf8'));
 
 //BEGIN
 client.on('ready', () => {
@@ -18,6 +18,35 @@ client.on('ready', () => {
     status: 'online'
   })
 });
+//skill elite 
+client.on('message', member => {
+  messagee = member.content.substr(1);
+  messageArray = messagee.split(" ");
+  if (member.content.charAt(0) == "#" && messageArray[0] == "skill") {
+    console.log('check :' + skillelite);
+    skillelite.forEach(function (item, index, array) {
+      if (skillelite[index].id == messageArray[1]) {
+        const skillEliteEmbeded = new Discord.RichEmbed()
+          .setColor('#0099ff')
+          .setTitle('Some title')
+          .setURL('https://discord.js.org/')
+          .setAuthor(skillelite[index].name)
+          .setDescription('Some description here')
+          .setThumbnail(skillelite[index].image)
+          .addField('Điều kiện kích hoạt', 'Some value here')
+          .addBlankField()
+          .addField('Inline field title', 'Some value here', true)
+          .addField('Inline field title', 'Some value here', true)
+          .addField('Inline field title', 'Some value here', true)
+          .setImage(skillelite[index].image)
+          .setTimestamp()
+          .setFooter('Some footer text here', skillelite[index].image);
+        member.channel.send(skillEliteEmbeded);
+      }
+    })
+  }
+
+})
 //new member
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
@@ -266,8 +295,6 @@ client.on('message', message => {
 client.on('message', message => {
   // console.log(message.guild.name)
 })
-console.log(client.guilds.array.toString)
-
 //game khác  , đừng quan tâm 
 //get icon 
 function getIcon(name) {
@@ -317,7 +344,7 @@ client.on('message', message => {
 
     if (message.content.charAt(0) === "!" && !/^\d+$/.test(searchString)) {
       json.forEach(logArrayElementsByName);
-      if (count == 0 ) {
+      if (count == 0) {
         if (message.member.id != 602517706155229185) {
           message.channel.send('Không có món nào tên như nềy cả !!! ')
         }
