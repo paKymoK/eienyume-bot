@@ -341,8 +341,8 @@ client.on('message', message => {
       }
     }
     //List ID
-    if (messageArray[0] == "#list") {
-      message.author.send("Testing message.", { files: ["./item.json"] });
+    if (messageArray[0] == ".list") {
+      message.author.send("Danh sách item hiện tại.", { files: ["./item.json"] });
     }
     //check is number or string
     // tìm theo tên
