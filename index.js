@@ -315,9 +315,13 @@ client.on('message', message => {
     var id = -1;
     var count = 0;
     var idlist = [];
+    var checkIdList = []
     function logArrayElements(element, index) {
       let idArray = element.id.split(",");
       idArray.forEach(elements => {
+        if (elements != "") {
+          checkIdList.push(Number(elements));
+        }
         if (elements === searchString) {
           id = index;
         }
@@ -336,8 +340,9 @@ client.on('message', message => {
         idlist.push(id);
       }
     }
-    if (messageArray[0] === "!tênthật") {
-      message.channel.send(message.member.user.tag);
+    //List ID
+    if (messageArray[0] == "#list") {
+      message.author.send("Testing message.", { files: ["./item.json"] });
     }
     //check is number or string
     // tìm theo tên
