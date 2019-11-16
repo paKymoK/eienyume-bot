@@ -372,24 +372,31 @@ client.on('message', message => {
       // message.author.send("Danh sách item hiện tại.", { files: ["./item.json"] });
       json.forEach(logArrayElements);
       if (Number(messageArray[1] <= 500)) {
+        message.channel.send("danh sách id từ 0 đến 500 đã dịch")
         message.channel.send(checkIdList500.sort(function(a, b){return a - b}));
       }
       if (Number(messageArray[1] > 500) && Number(messageArray[1] <= 1000)) {
+        message.channel.send("danh sách id từ 500 đến 1000 đã dịch")
         message.channel.send(checkIdList1000.sort(function(a, b){return a - b}));
       }
       if (Number(messageArray[1] > 1000) && Number(messageArray[1] <= 1500)) {
+        message.channel.send("danh sách id từ 1000 đến 1500 đã dịch")
         message.channel.send(checkIdList1500.sort(function(a, b){return a - b}));
       }
       if (Number(messageArray[1] > 1500) && Number(messageArray[1] <= 2000)) {
+        message.channel.send("danh sách id từ 1500 đến 2000 đã dịch")
         message.channel.send(checkIdList2000.sort(function(a, b){return a - b}));
       }
       if (Number(messageArray[1] > 2000) && Number(messageArray[1] <= 2500)) {
+        message.channel.send("danh sách id từ 2000 đến 2500 đã dịch")
         message.channel.send(checkIdList2500.sort(function(a, b){return a - b}));
       }
       if (Number(messageArray[1] > 2500) && Number(messageArray[1] <= 3000)) {
+        message.channel.send("danh sách id từ 2500 đến 3000 đã dịch")
         message.channel.send(checkIdList3000.sort(function(a, b){return a - b}));
       }
       if (Number(messageArray[1] > 3000) && Number(messageArray[1] <= 3500)) {
+        message.channel.send("danh sách id từ 3000 đến 3500 đã dịch")
         message.channel.send(checkIdList3500.sort(function(a, b){return a - b}));
       }
     }
