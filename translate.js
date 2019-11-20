@@ -2,12 +2,11 @@
 const { RichEmbed } = require('discord.js');
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync('./item.json', 'utf8'));
-function getIcon(name) {
-    console.log('check' + name);
+function getIcon(name, client) {
     const setItem = client.emojis.find(emoji => emoji.name === name);
     return setItem;
 }
-function translate(message,client) {
+function translate(message, client) {
     //message.member.id == 337641064720760852 |
     if (message.member.guild.id == 447325615587196929 || message.member.id == 337641064720760852) {
         let messageArray = message.content.split(" ");
@@ -161,7 +160,7 @@ function translate(message,client) {
                             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
                                 "Loại : " + json[id].type + "\n" + "\n" +
                                 "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + "\n" + "\n" +
+                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + "\n" + "\n" +
                                 "Set : " + setItem + " " + json[id].set
                             )
                         }
@@ -169,7 +168,7 @@ function translate(message,client) {
                             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
                                 "Loại : " + json[id].type + "\n" + "\n" +
                                 "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + "\n" + "\n" +
+                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + "\n" + "\n" +
                                 "Set : " + setItem + " " + json[id].set
                             )
                         }
@@ -177,7 +176,7 @@ function translate(message,client) {
                             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
                                 "Loại : " + json[id].type + "\n" + "\n" +
                                 "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + ',' + getIcon(attribute[2]) + ' ' + attribute[2] + "\n" + "\n" +
+                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + ',' + getIcon(attribute[2], client) + ' ' + attribute[2] + "\n" + "\n" +
                                 "Set : " + setItem + " " + json[id].set
                             )
                         }
@@ -257,7 +256,7 @@ function translate(message,client) {
                             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
                                 "Loại : " + json[id].type + "\n" + "\n" +
                                 "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + "\n" + "\n" +
+                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + "\n" + "\n" +
                                 "Set : " + setItem + " " + json[id].set
                             )
                         }
@@ -265,7 +264,7 @@ function translate(message,client) {
                             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
                                 "Loại : " + json[id].type + "\n" + "\n" +
                                 "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + "\n" + "\n" +
+                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + "\n" + "\n" +
                                 "Set : " + setItem + " " + json[id].set
                             )
                         }
@@ -273,7 +272,7 @@ function translate(message,client) {
                             embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
                                 "Loại : " + json[id].type + "\n" + "\n" +
                                 "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0]) + ' ' + attribute[0] + ',' + getIcon(attribute[1]) + ' ' + attribute[1] + ',' + getIcon(attribute[2]) + ' ' + attribute[2] + "\n" + "\n" +
+                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + ',' + getIcon(attribute[2], client) + ' ' + attribute[2] + "\n" + "\n" +
                                 "Set : " + setItem + " " + json[id].set
                             )
                         }
