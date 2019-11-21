@@ -1,18 +1,21 @@
 [
     {
-        "id":"1",
-        "name":"Thick Skin",
-        "image":"https://cdn.discordapp.com/attachments/614057351259095050/645241871857352705/latest.png",
-        "icon":"thickskin",
-        "condition":"Không có điều kiện kích hoạt",
-        "type":"Phòng thủ",
-        "describle":"Giảm sát thương nhận vào (thường là giảm 90%) (Dame chuẩn ko ảnh hưởng bởi cái này)"
-    },{
-        "id":"2",
-        "name":"Thick Skin2",
-        "icon":"thickskin",
-        "condition":"Không có điều kiện kích hoạt",
-        "type":"Phòng thủ",
-        "describle":"Giảm sát thương nhận vào (thường là giảm 90%) (Dame chuẩn ko ảnh hưởng bởi cái này)"
+        "id": "1",
+        "name": "Thick Skin",
+        "image": "https://cdn.discordapp.com/attachments/614057351259095050/645241871857352705/latest.png",
+        "icon": "thickskin",
+        "condition": "Không có điều kiện kích hoạt",
+        "type": "Phòng thủ",
+        "describle": "Giảm sát thương nhận vào (thường là giảm 90%) (Dame chuẩn ko ảnh hưởng bởi cái này)",
+        "counter": "Time",
+        "Note": ""
+    },
+    {
+        "id": "2",
+        "name": "Thick Skin2",
+        "icon": "thickskin",
+        "condition": "Không có điều kiện kích hoạt",
+        "type": "Phòng thủ",
+        "describle": "Giảm sát thương nhận vào (thường là giảm 90%) (Dame chuẩn ko ảnh hưởng bởi cái này)"
     }
 ]

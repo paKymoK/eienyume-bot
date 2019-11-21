@@ -15,11 +15,11 @@ function leaveMember(member) {
 function getEmoji(client, message) {
     let messageArray = message.content.split(" ");
     const setItem = client.emojis.find(emoji => emoji.name === "cowboyPepe");
-    if (messageArray == '#emo') {
+    if (messageArray == '.emo') {
         message.delete();
         message.channel.send(setItem + "");
     }
-    if (messageArray[0] == '#set') {
+    if (messageArray[0] == '.set') {
         json.forEach(function (item, index, array) {
             console.log(item.set + " " + index)
         })
