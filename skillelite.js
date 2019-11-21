@@ -1,21 +1,22 @@
 var fs = require('fs');
 const { RichEmbed } = require('discord.js');
 var skillelite = JSON.parse(fs.readFileSync('./skillelite.json', 'utf8'));
-function skillEliteEmbeded(skillelite){
+function skillEliteEmbeded(skillelite) {
     const skillEliteEmbeded = new RichEmbed()
-    .setColor('#0099ff')
-    .setTitle('???')
-    .setAuthor(skillelite.name)
-    .setDescription(skillelite.describle)
-    .setThumbnail(skillelite.image)
-    .addField('Điều kiện kích hoạt', skillelite.condition)
-    // .addBlankField()
-    // .addField('Inline field title', 'Some value here', true)
-    // .addField('Inline field title', 'Some value here', true)
-    // .addField('Inline field title', 'Some value here', true)
-    .setImage(skillelite.image)
-    .setTimestamp()
-    .setFooter('Some footer text here', skillelite.image);
+        .setColor('#0099ff')
+     .setTitle('Mức độ : ' + skillelite.rarity)
+        .setAuthor(skillelite.name)
+        .setDescription("Loại : " + skillelite.type + "\n" + "\n" +
+            "điều kiện kích hoạt : " + skillelite.condition)
+        .setThumbnail(skillelite.image)
+        .addField('Tác dụng : ', skillelite.describle)
+        // .addBlankField()
+        // .addField('Inline field title', 'Some value here', true)
+        // .addField('Inline field title', 'Some value here', true)
+        // .addField('Inline field title', 'Some value here', true)
+        .setImage(skillelite.image)
+        .setTimestamp()
+        .setFooter('?????????');
     return skillEliteEmbeded;
 }
 //message
@@ -24,8 +25,8 @@ function skillElite(message, client) {
     messageArray = messagee.split(" ");
     if (message.content.charAt(0) == "#" && messageArray[0] == "skill") {
         skillelite.forEach(function (item, index, array) {
-            if (skillelite[index].id == messageArray[1]) {
-                // message.channel.send(skillEliteEmbeded(skillelite[index]));
+            if (item.id == messageArray[1]) {
+                message.channel.send(skillEliteEmbeded(item));
             }
         })
     }
