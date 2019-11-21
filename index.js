@@ -17,7 +17,7 @@ client.on('ready', () => {
     status: 'online'
   })
 });
-//translate - skill elite
+//main
 client.on('message', message => {
   //translate
   translate(message, client);

@@ -6,6 +6,89 @@ function getIcon(name, client) {
     const setItem = client.emojis.find(emoji => emoji.name === name);
     return setItem;
 }
+//embeded item
+function embededItem(client, embed, json) {
+    const setItem = client.emojis.find(emoji => emoji.name === json.set);
+    const starNumber = client.emojis.find(emoji => emoji.name === json.rarity);
+    const star = client.emojis.find(emoji => emoji.name === "star");
+    const attribute = client.emojis.find(emoji => emoji.name === json.attribute);
+    // Set the main content of the embed
+    embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+        "Loại : " + json.type + "\n" + "\n" +
+        "ID : " + json.id + "\n" + "\n" +
+        "Thuộc tính :" + attribute + "\n" + "\n" +
+        "Set : " + setItem + " " + json.set
+    )
+
+    embed.setThumbnail(json.thumbnail)
+        .addField("Effect 1 : " + json.skill1name, json.skill1)
+        .addField("Effect 2 : " + json.skill2name, json.skill2)
+    if (json.type == "Áo" && json.type != 'Pet') {
+        embed.addField("Chỉ số : ", "```" + "Cost : " + json.cost + "\n" +
+            "Máu cơ bản : " + json.basehp + "\n" + "```")
+    } else {
+        if (json.type == "Huy hiệu" && json.type != 'Pet') {
+            embed.addField("Chỉ số : ", "```" + "Cost : " + json.cost + "\n" + "```")
+        } else {
+            try {//weapon
+                if (json.type != 'Pet') {
+                    embed.addField("Chỉ số : ", "```" + "Cost : " + json.cost + "\n" +
+                        "Sát thương : " + json.basedame + "\n"
+                        + "Tốc độ : " + json.attackspeed + " /s" + "\n"
+                        + "Đạn : " + json.ammo + "```")
+                }
+            } catch{
+                console.log(Error) 
+            }
+
+        }
+    }
+    if (json.moe == "Có") {
+        embed.setImage(json.linkmoe)
+    }
+    embed.setColor(0xFF0000)
+}
+//embeded cho pet
+function embededPet(client, embed, json) {
+    const setItem = client.emojis.find(emoji => emoji.name === json.set);
+    const starNumber = client.emojis.find(emoji => emoji.name === json.rarity);
+    const star = client.emojis.find(emoji => emoji.name === "star");
+    // const attribute = client.emojis.find(emoji => emoji.name === json[id].attribute);
+    let attribute = json.attribute.split(',')
+    if (json.rarity == 'five') {
+        embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+            "Loại : " + json.type + "\n" + "\n" +
+            "ID : " + json.id + "\n" + "\n" +
+            "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + "\n" + "\n" +
+            "Set : " + setItem + " " + json.set
+        )
+    }
+    if (json.rarity == 'six') {
+        embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+            "Loại : " + json.type + "\n" + "\n" +
+            "ID : " + json.id + "\n" + "\n" +
+            "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + "\n" + "\n" +
+            "Set : " + setItem + " " + json.set
+        )
+    }
+    if (json.rarity == 'seven') {
+        embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
+            "Loại : " + json.type + "\n" + "\n" +
+            "ID : " + json.id + "\n" + "\n" +
+            "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + ',' + getIcon(attribute[2], client) + ' ' + attribute[2] + "\n" + "\n" +
+            "Set : " + setItem + " " + json.set
+        )
+    }
+    embed.setThumbnail(json.thumbnail)
+        .addField("Chỉ số : ", "```" + "Sát thương : " + json.basedame + "\n"
+            + "Tỉ lệ crit : " + json.crit + "```")
+        .addField(json.skill1kind, "```" + json.skill1name + " :" + "\n" + json.skill1 + "." + json.unlock + "```")
+        .addField(json.skill2kind, "```" + json.skill2name + " :" + "\n" + json.skill2 + "```")
+        .addField(json.skill3kind, "```" + json.skill3name + " :" + "\n" + json.skill3 + "```")
+}
+
+
+//Main translate
 function translate(message, client) {
     //message.member.id == 337641064720760852 |
     if (message.member.guild.id == 447325615587196929 || message.member.id == 337641064720760852) {
@@ -155,73 +238,11 @@ function translate(message, client) {
                     )
                 } else {
                     if (json[id].type == 'Pet') {
-                        let attribute = json[id].attribute.split(',')
-                        if (json[id].rarity == 'five') {
-                            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                                "Loại : " + json[id].type + "\n" + "\n" +
-                                "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + "\n" + "\n" +
-                                "Set : " + setItem + " " + json[id].set
-                            )
-                        }
-                        if (json[id].rarity == 'six') {
-                            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                                "Loại : " + json[id].type + "\n" + "\n" +
-                                "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + "\n" + "\n" +
-                                "Set : " + setItem + " " + json[id].set
-                            )
-                        }
-                        if (json[id].rarity == 'seven') {
-                            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                                "Loại : " + json[id].type + "\n" + "\n" +
-                                "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + ',' + getIcon(attribute[2], client) + ' ' + attribute[2] + "\n" + "\n" +
-                                "Set : " + setItem + " " + json[id].set
-                            )
-                        }
-                        embed.setThumbnail(json[id].thumbnail)
-                            .addField("Chỉ số : ", "```" + "Sát thương : " + json[id].basedame + "\n"
-                                + "Tỉ lệ crit : " + json[id].crit + "```")
-                            .addField(json[id].skill1kind, "```" + json[id].skill1name + " :" + "\n" + json[id].skill1 + "." + json[id].unlock + "```")
-                            .addField(json[id].skill2kind, "```" + json[id].skill2name + " :" + "\n" + json[id].skill2 + "```")
-                            .addField(json[id].skill3kind, "```" + json[id].skill3name + " :" + "\n" + json[id].skill3 + "```")
+                        //pet
+                        embededPet(client, embed, json[id]);
                     } else {
-                        // Set the main content of the embed
-                        embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                            "Loại : " + json[id].type + "\n" + "\n" +
-                            "ID : " + json[id].id + "\n" + "\n" +
-                            "Thuộc tính :" + attribute + "\n" + "\n" +
-                            "Set : " + setItem + " " + json[id].set
-                        )
-
-                        embed.setThumbnail(json[id].thumbnail)
-                            .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
-                            .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
-                        if (json[id].type == "Áo" && json[id].type != 'Pet') {
-                            embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-                                "Máu cơ bản : " + json[id].basehp + "\n" + "```")
-                        } else {
-                            if (json[id].type == "Huy hiệu" && json[id].type != 'Pet') {
-                                embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
-                            } else {
-                                try {//weapon
-                                    if (json[id].type != 'Pet') {
-                                        embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-                                            "Sát thương : " + json[id].basedame + "\n"
-                                            + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
-                                            + "Đạn : " + json[id].ammo + "```")
-                                    }
-                                } catch{
-                                    // console.log(Error) 
-                                }
-
-                            }
-                        }
-                        if (json[id].moe === "Có") {
-                            embed.setImage(json[id].linkmoe)
-                        }
-                        embed.setColor(0xFF0000)
+                        //item
+                        embededItem(client, embed, json[id]);
                     }
                     if (message.member.id != 602517706155229185) {
                         message.channel.send(embed);
@@ -236,7 +257,6 @@ function translate(message, client) {
                 const setItem = client.emojis.find(emoji => emoji.name === json[id].set);
                 const starNumber = client.emojis.find(emoji => emoji.name === json[id].rarity);
                 const star = client.emojis.find(emoji => emoji.name === "star");
-                const attribute = client.emojis.find(emoji => emoji.name === json[id].attribute);
                 const embed = new RichEmbed()
                     .setTitle(setItem + " " + json[id].name)
                     .setFooter("Slave của Wanderer")
@@ -251,70 +271,11 @@ function translate(message, client) {
                     )
                 } else {
                     if (json[id].type == 'Pet') {
-                        let attribute = json[id].attribute.split(',')
-                        if (json[id].rarity == 'five') {
-                            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                                "Loại : " + json[id].type + "\n" + "\n" +
-                                "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + "\n" + "\n" +
-                                "Set : " + setItem + " " + json[id].set
-                            )
-                        }
-                        if (json[id].rarity == 'six') {
-                            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                                "Loại : " + json[id].type + "\n" + "\n" +
-                                "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + "\n" + "\n" +
-                                "Set : " + setItem + " " + json[id].set
-                            )
-                        }
-                        if (json[id].rarity == 'seven') {
-                            embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                                "Loại : " + json[id].type + "\n" + "\n" +
-                                "ID : " + json[id].id + "\n" + "\n" +
-                                "Thuộc tính :" + getIcon(attribute[0], client) + ' ' + attribute[0] + ',' + getIcon(attribute[1], client) + ' ' + attribute[1] + ',' + getIcon(attribute[2], client) + ' ' + attribute[2] + "\n" + "\n" +
-                                "Set : " + setItem + " " + json[id].set
-                            )
-                        }
-                        embed.setThumbnail(json[id].thumbnail)
-                            .addField("Chỉ số : ", "```" + "Sát thương : " + json[id].basedame + "\n"
-                                + "Tỉ lệ crit : " + json[id].crit + "```")
-                            .addField(json[id].skill1kind, "```" + json[id].skill1name + " :" + "\n" + json[id].skill1 + "." + json[id].unlock + "```")
-                            .addField(json[id].skill2kind, "```" + json[id].skill2name + " :" + "\n" + json[id].skill2 + "```")
-                            .addField(json[id].skill3kind, "```" + json[id].skill3name + " :" + "\n" + json[id].skill3 + "```")
-
+                        //pet
+                        embededPet(client, embed, json[id])
                     } else {
-                        // Set the main content of the embed
-                        embed.setDescription("Số sao: " + starNumber + star + "\n" + "\n" +
-                            "Loại : " + json[id].type + "\n" + "\n" +
-                            "ID : " + json[id].id + "\n" + "\n" +
-                            "Thuộc tính :" + attribute + "\n" + "\n" +
-                            "Set : " + setItem + " " + json[id].set
-                        )
-                        embed.setThumbnail(json[id].thumbnail)
-                            .addField("Effect 1 : " + json[id].skill1name, json[id].skill1)
-                            .addField("Effect 2 : " + json[id].skill2name, json[id].skill2)
-                        if (json[id].type === "Áo" && json[id].type != 'Pet') {
-                            embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-                                "Máu cơ bản : " + json[id].basehp + "\n" + "```")
-                        } else {
-                            if (json[id].type === "Huy hiệu" && json[id].type != 'Pet') {
-                                embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" + "```")
-                            } else {
-                                if (json[id].type != 'Pet') {
-                                    //weapon
-                                    embed.addField("Chỉ số : ", "```" + "Cost : " + json[id].cost + "\n" +
-                                        "Sát thương : " + json[id].basedame + "\n"
-                                        + "Tốc độ : " + json[id].attackspeed + " /s" + "\n"
-                                        + "Đạn : " + json[id].ammo + "```")
-                                }
-                            }
-                        }
-
-                        if (json[id].moe === "Có") {
-                            embed.setImage(json[id].linkmoe)
-                        }
-                        embed.setColor(0xFF0000)
+                        //item
+                        embededItem(client, embed, json[id]);
                     }
                     if (message.member.id != 602517706155229185) {
                         message.channel.send(embed);
