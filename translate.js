@@ -103,14 +103,14 @@ function translate(message, client) {
         var id = -1;
         var count = 0;
         var idlist = [];
-        var checkIdList500 = []
-        var checkIdList1000 = []
-        var checkIdList1500 = []
-        var checkIdList2000 = []
-        var checkIdList2500 = []
-        var checkIdList3000 = []
-        var checkIdList3500 = []
-
+        var checkIdList500 = [];
+        var checkIdList1000 = [];
+        var checkIdList1500 = [];
+        var checkIdList2000 = [];
+        var checkIdList2500 = [];
+        var checkIdList3000 = [];
+        var checkIdList3500 = [];
+        var totalId = 0;
         function logArrayElements(element, index) {
             let idArray = element.id.split(",");
             idArray.forEach(elements => {
@@ -138,6 +138,7 @@ function translate(message, client) {
                 if (elements === searchString) {
                     id = index;
                 }
+                totalId++;
             });
         }
         function logArrayElementsByName(element, index) {
@@ -185,6 +186,10 @@ function translate(message, client) {
                 message.channel.send("danh sách id từ 3000 đến 3500 đã dịch")
                 message.channel.send(checkIdList3500.sort(function (a, b) { return a - b }));
             }
+        }
+        if (message.content == ".list all") {
+            json.forEach(logArrayElements);
+            message.channel.send('tổng số : ' + totalId + ' iD đã được dịch');
         }
         //check is number or string
         // tìm theo tên

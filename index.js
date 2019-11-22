@@ -3,9 +3,10 @@ require('dotenv').config();
 
 const client = new Discord.Client();
 const permissions = new Discord.Permissions(8);
-var translate = require('./translate.js')
-var welcome = require('./guildManager.js')
-var skillelite = require('./skillelite.js')
+var translate = require('./translate.js');
+var welcome = require('./guildManager.js');
+var skillelite = require('./skillelite.js');
+var boss = require('./boss.js');
 //BEGIN
 client.on('ready', () => {
   console.log('I am ready! ');
@@ -23,6 +24,8 @@ client.on('message', message => {
   translate(message, client);
   //skillelite 
   skillelite(message, client);
+  //boss
+  boss(message, client)
   //Emoji
   welcome.getEmoji(client, message);
   //change Presence

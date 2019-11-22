@@ -8,7 +8,7 @@
         "condition": "Không có điều kiện kích hoạt",
         "type": "Phòng thủ",
         "describle": "Giảm sát thương nhận vào (thường là giảm 90%) (Dame chuẩn ko ảnh hưởng bởi cái này)",
-        "counter": "Time",
+        "counter": "Time Lock",
         "Note": ""
     },
     {
