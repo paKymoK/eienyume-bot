@@ -7,6 +7,8 @@ var translate = require('./translate.js');
 var welcome = require('./guildManager.js');
 var skillelite = require('./skillelite.js');
 var boss = require('./boss.js');
+// var test = require('./test.js');
+var canvas = require('./canvas.js');
 //BEGIN
 client.on('ready', () => {
   console.log('I am ready! ');
@@ -32,10 +34,19 @@ client.on('message', message => {
   welcome.changePresence(client, message);
   //Crawl Data
   welcome.crawlData(client, message);
+  //fake new member
+  // test.fakeNewMember(client, message);
+});
+//async message
+client.on('message', async message => {
+	if (message.content === '.join') {
+		client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+	}
 });
 //new member
-client.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', async member => {
   welcome.newMember(member);
+  canvas.newMember(client, member);
 });
 //leave member
 client.on('guildMemberRemove', member => {
