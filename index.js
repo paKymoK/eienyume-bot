@@ -45,7 +45,7 @@ client.on('message', async message => {
 });
 //new member
 client.on('guildMemberAdd', async member => {
-  welcome.newMember(member);
+  // welcome.newMember(member);
   canvas.newMember(client, member);
 });
 //leave member
