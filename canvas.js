@@ -36,6 +36,7 @@ async function newMember(client, member) {
 
     // Add an exclamation point here and below
     ctx.font = applyText(canvas, `${member.displayName}!`);
+    console.log(member.displayName);
     ctx.fillStyle = '#ffffff';
     ctx.fillText(`${member.displayName}!`, canvas.width / 2.5, canvas.height / 1.8);
 
