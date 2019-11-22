@@ -38,7 +38,7 @@ function embededItem(client, embed, json) {
                         + "Đạn : " + json.ammo + "```")
                 }
             } catch{
-                console.log(Error) 
+                console.log(Error)
             }
 
         }
@@ -207,7 +207,7 @@ function translate(message, client) {
                     message.channel.send('Từ này ngắn quá , làm ơn thêm chữ đi !!');
                 } else {
                     const embed = new RichEmbed()
-                        .setTitle('Danh sách đồ có chứa từ : ' + messageArray[1])
+                        .setTitle('Danh sách đồ có chứa từ : ' + message.content.slice(1, message.content.length))
                         .setFooter("Slave của Wanderer")
                         .setTimestamp()
                         .setDescription(description + "\n" +
