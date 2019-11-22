@@ -39,13 +39,13 @@ client.on('message', message => {
 });
 //async message
 client.on('message', async message => {
-	if (message.content === '.join') {
-		client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
-	}
+  if (message.content === '.join' && message.author.id == 337641064720760852) {
+    client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+  }
 });
 //new member
 client.on('guildMemberAdd', async member => {
-  // welcome.newMember(member);
+  welcome.newMember(member);
   canvas.newMember(client, member);
 });
 //leave member

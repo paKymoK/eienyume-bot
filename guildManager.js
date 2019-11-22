@@ -2,7 +2,7 @@ const { Attachment } = require('discord.js');
 function newMember(member) {
     const channel = member.guild.channels.find(ch => ch.id == 631321386044096533);
     if (member.guild.id == 447325615587196929) {
-        member.addRole('631831652070326282');
+        // member.addRole('631831652070326282');
         if (!channel) return;
         channel.send(`${member} đã đến đêy`);
     }
