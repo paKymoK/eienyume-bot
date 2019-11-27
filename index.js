@@ -9,6 +9,7 @@ var skillelite = require('./skillelite.js');
 var boss = require('./boss.js');
 // var test = require('./test.js');
 var canvas = require('./canvas.js');
+var profile = require('./profile.js')
 //BEGIN
 client.on('ready', () => {
   console.log('I am ready! ');
@@ -22,6 +23,7 @@ client.on('ready', () => {
 });
 //main
 client.on('message', message => {
+
   //translate
   translate(message, client);
   //skillelite 
@@ -34,8 +36,8 @@ client.on('message', message => {
   welcome.changePresence(client, message);
   //Crawl Data
   welcome.crawlData(client, message);
-  //fake new member
-  // test.fakeNewMember(client, message);
+  //my profile
+  profile.getProfile(client, message);
 });
 //async message
 client.on('message', async message => {
