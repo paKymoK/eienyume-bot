@@ -7,9 +7,11 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
-    "canvas": "^2.6.0",
+    "canvas": "^2.6.1",
+    "discord-dynamic-messages": "^3.3.1",
     "discord.js": "^11.5.1",
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "save": "^2.4.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
