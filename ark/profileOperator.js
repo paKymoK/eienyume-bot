@@ -8,6 +8,7 @@ const time = 60000; // time limit: 1 min
 const emojiNext = '➡'; // unicode emoji are identified by the emoji itself
 const emojiPrevious = '⬅';
 const reactionArrow = [emojiPrevious, emojiNext];
+const maxPage = 2
 
 function embedItem(message, client, operator) {
     //First page
@@ -28,12 +29,19 @@ function embedItem(message, client, operator) {
     for (let i = 0; i < operator.tagList.length; i++) {
         tag = tag + "," + operator.tagList[i]
     }
+
+
+
+
+
+
     let imageLocalPath = "./ark/image/characters/" + charCode + "_2.png"
-    if (imageLocalPath == null) {
+    if (operator.rarity < 3) {
         imageLocalPath = "./ark/image/characters/" + charCode + "_1.png"
     }
+    let attachment = new Discord.Attachment(imageLocalPath, 'character.png');
     const stat = operator.phases[operator.phases.length - 1].attributesKeyFrames[operator.phases[operator.phases.length - 1].attributesKeyFrames.length - 1].data
-    const attachment = new Discord.Attachment(imageLocalPath, 'character.png');
+
 
     var find = '</>';
     var re = new RegExp(find, 'g');
@@ -58,13 +66,13 @@ function embedItem(message, client, operator) {
             if (trustBonus[k] == 0 || trustBonus[k] == false || trustBonus[k] == true) {
 
             } else {
-                trustBonusData = trustBonusData + k + " : " + trustBonus[k] + "\n"
+                trustBonusData = trustBonusData + k.toUpperCase() + " : " + trustBonus[k] + "\n"
             }
         })
     }
 
     const first = () => new Discord.RichEmbed()
-        .setTitle(opeIcon + "" + operator.name)
+        .setTitle(opeIcon + " " + operator.name)
         /*
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
@@ -99,12 +107,9 @@ function embedItem(message, client, operator) {
             + "\n" + client.emojis.find(emoji => emoji.name === "4_") + " : " + potential[3].description + "\n"
             + "\n" + client.emojis.find(emoji => emoji.name === "5_") + " : " + potential[4].description
     }
-    let skill = operator.skills[0].skillId
-    Object.keys(skill).forEach(function (k) {
-        console.log(k)
-    })
-    const second = () => new Discord.RichEmbed()
-        .setTitle(opeIcon + "" + operator.name)
+    let skill = operator.skills
+    let secondPage = new Discord.RichEmbed()
+        .setTitle(opeIcon + " " + operator.name)
         /*
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
@@ -113,17 +118,53 @@ function embedItem(message, client, operator) {
         .setImage('attachment://character.png')
         .setThumbnail(faction)
         .setDescription(potentialData)
+
         /*
          * Takes a Date object, defaults to current date.
          */
         .setURL(url)
+    Object.keys(skill).forEach(function (k) {
+        let nameSkill = skilltable[skill[k].skillId].levels[skilltable[skill[k].skillId].levels.length - 1].name
+        let descSkill = skilltable[skill[k].skillId].levels[skilltable[skill[k].skillId].levels.length - 1].description
+        let blackBoard = skilltable[skill[k].skillId].levels[skilltable[skill[k].skillId].levels.length - 1].blackboard
+        let spData = skilltable[skill[k].skillId].levels[skilltable[skill[k].skillId].levels.length - 1].spData
+        let spType = ""
+        if (spData.spType == 1) {
+            spType = "`Auto Recovery`"
+        }
+        if (spData.spType == 2) {
+            spType = "`Attack Recovery`"
+        }
+        if (spData.spType == 4) {
+            spType = "`Getting Hit to Recovery`"
+        }
+        // console.log(blackBoard)
+        descSkill = descSkill.replace(re, '').replace(/<@ba.vup>/g, '').replace(/<@ba.rem>/g, '').replace(/{/g, '').replace(/}/g, '')
 
+        for (let i = 0; i < blackBoard.length; i++) {
+            descSkill = descSkill.replace(blackBoard[i].key + ":0%", Math.round(blackBoard[i].value * 100) + "%")
+            descSkill = descSkill.replace(blackBoard[i].key, blackBoard[i].value)
+        }
+        secondPage.addField(nameSkill, descSkill + "\n" +
+            spType + "\n" + "Base Sp: " + spData.initSp + " - " + "Sp Cost: " + spData.spCost)
+    })
+    const second = () => secondPage
 
     const third = () => new Discord.RichEmbed()
-        .setAuthor('TOTO', "https://i.imgur.com/ezC66kZ.png")
-        .setColor('#35D')
-        .setTitle('Third')
-        .setDescription('Third');
+        .setTitle(opeIcon + " " + operator.name)
+        /*
+         * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+         */
+        .setColor(0x00AE86)
+        .attachFile(attachment)
+        .setImage('attachment://character.png')
+        .setThumbnail(faction)
+        .setDescription("Đang phát triển")
+
+        /*
+         * Takes a Date object, defaults to current date.
+         */
+        .setURL(url)
 
     const list = [first, second, third];
 
@@ -149,7 +190,7 @@ function embedItem(message, client, operator) {
         }
         return i;
     }
-
+ 
     function createCollectorMessage(message, getList) {
         let i = 0;
         const collector = message.createReactionCollector(filter, { time });
@@ -159,7 +200,9 @@ function embedItem(message, client, operator) {
         collector.on('end', collected => message.clearReactions());
     }
     function getList(i) {
-        return list[i]().setTimestamp().setFooter(`Page ${i + 1}`); // i+1 because we start at 0
+        if ((-1 < i) && (i < maxPage)) {
+            return list[i]().setTimestamp().setFooter(`Page ${i + 1}`);
+        }
     }
     message.channel.send(getList(0))
         .then(msg => msg.react(emojiPrevious))
@@ -194,9 +237,7 @@ function sendList(message, client) {
             // console.log(searchString);
         }
         searchString = searchString.substr(1);
-        console.log(searchString)
         if (message.content.charAt(0) === "!") {
-            console.log(`check`)
             const listOperator = findOperator(searchString)
             if (listOperator.length == 1) {
                 operator = listOperator[0]
@@ -209,8 +250,15 @@ function sendList(message, client) {
                 var description = '';
                 listOperator.forEach(element => {
                     // console.log(element);
-                    const opeIcon = client.emojis.find(emoji => emoji.name === element.name);
-                    description = description + "Tên : " + opeIcon + "  " + element.name + "\n" + "\n"
+                    let charCode = element.potentialItemId.slice(2)
+                    // console.log(charCode)
+                    const opeIcon = client.emojis.find(emoji => emoji.name === charCode);
+                    if (opeIcon != null) {
+                        description = description + "Tên : " + opeIcon + "  " + element.name + "\n" + "\n"
+                    } else {
+                        description = description + "Tên : " + element.name + "\n" + "\n"
+                    }
+
                 })
                 if (description.length > 2000) {
                     message.channel.send('Từ này ngắn quá , làm ơn thêm chữ đi !!');
