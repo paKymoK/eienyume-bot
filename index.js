@@ -29,9 +29,6 @@ client.on('message', message => {
   //trade
   trade(message, client)
 
-
-
-
   ////ggz
   //translate
   // translate(message, client);
