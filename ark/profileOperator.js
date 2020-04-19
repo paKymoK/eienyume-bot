@@ -30,9 +30,15 @@ function embedItem(message, client, operator) {
         tag = tag + "," + operator.tagList[i]
     }
 
-
-
-
+    const atkIcon = client.emojis.find(emoji => emoji.name === "ATK");
+    const hpIcon = client.emojis.find(emoji => emoji.name === "HP");
+    const rdpIcon = client.emojis.find(emoji => emoji.name === "RDP");
+    const defIcon = client.emojis.find(emoji => emoji.name === "DEF");
+    const resIcon = client.emojis.find(emoji => emoji.name === "RES");
+    const blockIcon = client.emojis.find(emoji => emoji.name === "BLOCK");
+    const aspdIcon = client.emojis.find(emoji => emoji.name === "ASPD");
+    const costIcon = client.emojis.find(emoji => emoji.name === "COST");
+    const m3Icon = client.emojis.find(emoji => emoji.name === "m3");
 
 
     let imageLocalPath = "./ark/image/characters/" + charCode + "_2.png"
@@ -53,7 +59,7 @@ function embedItem(message, client, operator) {
     }
     let talentDescription = ""
     if (operator.talents.length == 2) {
-        talentDescription = "`" + talent1.name + "`" + "\n" + talent1.description.replace(/<@ba.talpu>/g, '').replace(re, '') + "\n" + "`" + talent2.name + "`" + "\n" + talent2.description.replace(/<@ba.talpu>/g, '').replace(re, '')
+        talentDescription = "`" + talent1.name + "`" + "\n" + talent1.description.replace(/<@ba.talpu>/g, '').replace(re, '') + "\n" + "\n" + "`" + talent2.name + "`" + "\n" + talent2.description.replace(/<@ba.talpu>/g, '').replace(re, '')
     }
     if (operator.talents.length == 1) {
         talentDescription = "`" + talent1.name + "`" + "\n" + talent1.description.replace(/<@ba.talpu>/g, '').replace(re, '')
@@ -72,7 +78,7 @@ function embedItem(message, client, operator) {
     }
 
     const first = () => new Discord.RichEmbed()
-        .setTitle(opeIcon + " " + operator.name)
+        .setTitle(opeIcon + " " + operator.name + " - " + operator.displayNumber)
         /*
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
@@ -87,14 +93,14 @@ function embedItem(message, client, operator) {
         .addField(rarity + " | " + classes,
             tag + ".")
         .addField("Trait", description + ".")
-        .addField("Max HP", stat.maxHp, true)
-        .addField("ATK", stat.atk, true)
-        .addField("DEF", stat.def, true)
-        .addField("RES", stat.magicResistance, true)
-        .addField("Redeploy", stat.respawnTime + "s", true)
-        .addField("Cost", stat.cost, true)
-        .addField("Block", stat.blockCnt, true)
-        .addField("ASPD", stat.baseAttackTime + "/s", true)
+        .addField(atkIcon + "ATK", stat.atk, true)
+        .addField(defIcon + "DEF", stat.def, true)
+        .addField(resIcon + "RES", stat.magicResistance, true)
+        .addField(aspdIcon + "ASPD", stat.baseAttackTime + "/s", true)
+        .addField(costIcon + "Cost", stat.cost, true)
+        .addField(blockIcon + "Block", stat.blockCnt, true)
+        .addField(hpIcon + "Max HP", stat.maxHp, true)
+        .addField(rdpIcon + "Redeploy", stat.respawnTime + "s", true)
         .addField("Trust Bonus", " " + trustBonusData)
         .addField("Talent", talentDescription)
 
@@ -109,7 +115,7 @@ function embedItem(message, client, operator) {
     }
     let skill = operator.skills
     let secondPage = new Discord.RichEmbed()
-        .setTitle(opeIcon + " " + operator.name)
+        .setTitle(opeIcon + " " + operator.name + " - " + operator.displayNumber)
         /*
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
@@ -128,6 +134,14 @@ function embedItem(message, client, operator) {
         let descSkill = skilltable[skill[k].skillId].levels[skilltable[skill[k].skillId].levels.length - 1].description
         let blackBoard = skilltable[skill[k].skillId].levels[skilltable[skill[k].skillId].levels.length - 1].blackboard
         let spData = skilltable[skill[k].skillId].levels[skilltable[skill[k].skillId].levels.length - 1].spData
+        let skillId = skilltable[skill[k].skillId].skillId.replace(`[`, '').replace(`]`, '')
+        let iconId = skilltable[skill[k].skillId].iconId
+        let skillIcon = client.emojis.find(emoji => emoji.name === "skill_icon_" + skillId);
+        if (iconId != null) {
+            iconId = skilltable[skill[k].skillId].iconId.replace(`[`, '').replace(`]`, '')
+            skillIcon = client.emojis.find(emoji => emoji.name === "skill_icon_" + iconId);
+        }
+        // console.log("skill_icon_" + skillId)
         let spType = ""
         if (spData.spType == 1) {
             spType = "`Auto Recovery`"
@@ -139,19 +153,24 @@ function embedItem(message, client, operator) {
             spType = "`Getting Hit to Recovery`"
         }
         // console.log(blackBoard)
-        descSkill = descSkill.replace(re, '').replace(/<@ba.vup>/g, '').replace(/<@ba.rem>/g, '').replace(/{/g, '').replace(/}/g, '')
+        descSkill = descSkill.replace(re, '').replace(/<@ba.vup>/g, '').replace(/<@ba.vdown>/g, '').replace(/<@ba.rem>/g, '').replace(/-{-/g, '').replace(/{/g, '').replace(/}/g, '')
 
         for (let i = 0; i < blackBoard.length; i++) {
             descSkill = descSkill.replace(blackBoard[i].key + ":0%", Math.round(blackBoard[i].value * 100) + "%")
             descSkill = descSkill.replace(blackBoard[i].key, blackBoard[i].value)
         }
-        secondPage.addField(nameSkill, descSkill + "\n" +
-            spType + "\n" + "Base Sp: " + spData.initSp + " - " + "Sp Cost: " + spData.spCost)
+        if (operator.rarity > 2) {
+            secondPage.addField(skillIcon + " " + nameSkill + "-" + m3Icon, descSkill + "\n" +
+                spType + "\n" + "Base Sp: " + spData.initSp + " - " + "Sp Cost: " + spData.spCost)
+        } else {
+            secondPage.addField(skillIcon + " " + nameSkill + "-" + "Level 7", descSkill + "\n" +
+                spType + "-" + "Base Sp: " + spData.initSp + " - " + "Sp Cost: " + spData.spCost)
+        }
     })
     const second = () => secondPage
 
     const third = () => new Discord.RichEmbed()
-        .setTitle(opeIcon + " " + operator.name)
+        .setTitle(opeIcon + " " + operator.name + " - " + operator.displayNumber)
         /*
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
@@ -190,7 +209,7 @@ function embedItem(message, client, operator) {
         }
         return i;
     }
- 
+
     function createCollectorMessage(message, getList) {
         let i = 0;
         const collector = message.createReactionCollector(filter, { time });
@@ -239,6 +258,9 @@ function sendList(message, client) {
         searchString = searchString.substr(1);
         if (message.content.charAt(0) === "!") {
             const listOperator = findOperator(searchString)
+            if (searchString == "meteor") {
+                listOperator.pop()
+            }
             if (listOperator.length == 1) {
                 operator = listOperator[0]
                 embedItem(message, client, operator)

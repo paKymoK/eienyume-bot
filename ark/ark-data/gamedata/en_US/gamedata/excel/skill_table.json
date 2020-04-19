@@ -3863,7 +3863,7 @@
             "value": 0.05
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           }
         ]
@@ -3889,7 +3889,7 @@
             "value": 0.1
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           }
         ]
@@ -3915,7 +3915,7 @@
             "value": 0.15
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           }
         ]
@@ -3941,7 +3941,7 @@
             "value": 0.2
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -3967,7 +3967,7 @@
             "value": 0.25
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -3993,7 +3993,7 @@
             "value": 0.3
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -4019,7 +4019,7 @@
             "value": 0.4
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7702,7 +7702,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7724,7 +7724,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7746,7 +7746,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7768,7 +7768,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7790,7 +7790,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7812,7 +7812,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7834,7 +7834,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7856,7 +7856,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7878,7 +7878,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -7900,7 +7900,7 @@
         "duration": 25.0,
         "blackboard": [
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           }
         ]
@@ -46870,7 +46870,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -46888,7 +46888,7 @@
             "value": 0.4
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           },
           {
@@ -46900,7 +46900,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -46918,7 +46918,7 @@
             "value": 0.45
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           },
           {
@@ -46930,7 +46930,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -46948,7 +46948,7 @@
             "value": 0.5
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           },
           {
@@ -46960,7 +46960,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -46978,7 +46978,7 @@
             "value": 0.55
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           },
           {
@@ -46990,7 +46990,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -47008,7 +47008,7 @@
             "value": 0.6
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           },
           {
@@ -47020,7 +47020,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -47038,7 +47038,7 @@
             "value": 0.65
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           },
           {
@@ -47050,7 +47050,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -47068,7 +47068,7 @@
             "value": 0.7
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 1.0
           },
           {
@@ -47080,7 +47080,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -47098,7 +47098,7 @@
             "value": 0.8
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           },
           {
@@ -47110,7 +47110,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -47128,7 +47128,7 @@
             "value": 0.9
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           },
           {
@@ -47140,7 +47140,7 @@
       {
         "name": "Full Moon",
         "rangeId": null,
-        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
+        "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND}</> tiles, can attack up to <@ba.vup>{attack@max_target}</> targets simultaneously",
         "skillType": 1,
         "spData": {
           "spType": 1,
@@ -47158,7 +47158,7 @@
             "value": 1.0
           },
           {
-            "key": "ability_range_forward_extend",
+            "key": "ABILITY_RANGE_FORWARD_EXTEND",
             "value": 2.0
           },
           {
