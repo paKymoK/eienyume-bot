@@ -11,7 +11,7 @@ var trade = require('./ark/ark-trade.js')
 var canvas = require('./ggz/canvas.js');
 var profile = require('./ark/profile.js')
 var profileOperator = require('./ark/profileOperator.js')
-
+var testchange = `as`
 //BEGIN
 client.on('ready', () => {
   console.log('OK');
