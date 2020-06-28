@@ -1,7 +1,7 @@
 {
   "char_285_medic2": {
     "name": "Lancet-2",
-    "description": "Hồi máu cho đồng đội và bỏ qua <@ba.kw>giới hạn Deployment </>, nhưng có thời gian tái triển khai rất lâu",
+    "description": "Hồi máu cho đồng đội và bỏ qua <@ba.kw>Deployment Limit</>, nhưng có thời gian tái triển khai rất lâu",
     "canUseGeneralPotentialItem": false,
     "potentialItemId": "p_char_285_medic2",
     "team": -1,
@@ -1533,7 +1533,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -5611,7 +5611,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Targeting - Primary",
-            "description": "When attacking, has a 10% chance to increase the current damage of that attack to 150%",
+            "description": "Khi tấn công, có 10% cơ hội gây ra 150% DMG trong đòn đánh đó",
             "rangeId": null,
             "blackboard": [
               {
@@ -5632,7 +5632,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Targeting - Primary",
-            "description": "When attacking, has a 10% chance to increase the current damage of that attack to 160% <@ba.talpu>(+10%)</>",
+            "description": "Khi tấn công, có 10% cơ hộigây ra 160% DMG trong đòn đánh đó <@ba.talpu>(+10%)</>",
             "rangeId": null,
             "blackboard": [
               {
@@ -5653,7 +5653,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Targeting - Primary",
-            "description": "When attacking, has a 20% chance to increase the current damage of that attack to 150%",
+            "description": "Khi tấn công, có 20% cơ hội gây ra 150% DMG trong đòn đánh đó",
             "rangeId": null,
             "blackboard": [
               {
@@ -5674,7 +5674,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Targeting - Primary",
-            "description": "When attacking, has a 20% chance to increase the current damage of that attack to 160% <@ba.talpu>(+10%)</>",
+            "description": "Khi tấn công, có 20% cơ hội gây ra 160% DMG trong đòn đánh đó <@ba.talpu>(+10%)</>",
             "rangeId": null,
             "blackboard": [
               {
@@ -5693,7 +5693,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -5712,7 +5712,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -5756,7 +5756,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -5932,7 +5932,7 @@
   },
   "char_211_adnach": {
     "name": "Adnachiel",
-    "description": "Attacks aerial enemies first",
+    "description": "Ưu tiên tấn công kẻ địch trên không",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_211_adnach",
     "team": 3,
@@ -6088,7 +6088,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Shortcoming Breakthrough",
-            "description": "ASPD +4; Attacks ranged enemies first",
+            "description": "ASPD +4; Ưu tiên tấn công kẻ địch trên không",
             "rangeId": null,
             "blackboard": [
               {
@@ -6105,7 +6105,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Shortcoming Breakthrough",
-            "description": "ASPD +8; Attacks ranged enemies first",
+            "description": "ASPD +8; Ưu tiên tấn công kẻ địch trên không",
             "rangeId": null,
             "blackboard": [
               {
@@ -6120,7 +6120,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -6139,7 +6139,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -6177,7 +6177,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -6196,7 +6196,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -6372,7 +6372,7 @@
   },
   "char_121_lava": {
     "name": "Lava",
-    "description": "Deals <@ba.kw>AOE Arts Damage</>",
+    "description": "Gây <@ba.kw>AOE Arts Damage</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_121_lava",
     "team": 2,
@@ -6528,7 +6528,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Quick Skill Usage",
-            "description": "Immediately obtains 15 Skill Points after deployment",
+            "description": "Lập tức nhận được 15 SP sau khi được triển khai.",
             "rangeId": null,
             "blackboard": [
               {
@@ -6545,7 +6545,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Quick Skill Usage",
-            "description": "Immediately obtains 20 <@ba.talpu>(+5)</> Skill Points after deployment",
+            "description": "Lập tức nhận được 20 <@ba.talpu>(+5)</> SP sau khi đượct triển khai.",
             "rangeId": null,
             "blackboard": [
               {
@@ -6562,7 +6562,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Quick Skill Usage",
-            "description": "Immediately obtains 30 Skill Points after deployment",
+            "description": "Lập tức nhận được 30 SP sau khi được triển khai.",
             "rangeId": null,
             "blackboard": [
               {
@@ -6579,7 +6579,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Quick Skill Usage",
-            "description": "Immediately obtains 35 <@ba.talpu>(+5)</> Skill Points after deployment",
+            "description": "Lập tức nhận được 35 <@ba.talpu>(+5)</> SP sau khi được triển khai.",
             "rangeId": null,
             "blackboard": [
               {
@@ -6594,7 +6594,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -6613,7 +6613,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -6657,7 +6657,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -6833,7 +6833,7 @@
   },
   "char_120_hibisc": {
     "name": "Hibiscus",
-    "description": "Restores the HP of allies",
+    "description": "Hồi HP cho đồng minh",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_120_hibisc",
     "team": 2,
@@ -7021,7 +7021,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7040,7 +7040,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7078,7 +7078,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7097,7 +7097,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7273,7 +7273,7 @@
   },
   "char_212_ansel": {
     "name": "Ansel",
-    "description": "Restores the HP of allies",
+    "description": "Hồi HP cho đồng minh",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_212_ansel",
     "team": 3,
@@ -7429,7 +7429,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Additional Healing",
-            "description": "7% chance to heal 1 extra ally",
+            "description": "7% khả năng hồi thêm cho 1 đồng đội",
             "rangeId": null,
             "blackboard": [
               {
@@ -7446,7 +7446,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Additional Healing",
-            "description": "10% <@ba.talpu>(+3%)</> chance to heal 1 extra ally",
+            "description": "10% <@ba.talpu>(+3%)</> khả năng hồi thêm cho 1 đồng đội",
             "rangeId": null,
             "blackboard": [
               {
@@ -7463,7 +7463,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Additional Healing",
-            "description": "15% chance to heal 1 extra ally",
+            "description": "15% khả năng hồi thêm cho 1 đồng đội",
             "rangeId": null,
             "blackboard": [
               {
@@ -7480,7 +7480,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Additional Healing",
-            "description": "18% <@ba.talpu>(+3%)</> chance to heal 1 extra ally",
+            "description": "18% <@ba.talpu>(+3%)</> khả năng hồi thêm cho 1 đồng đ",
             "rangeId": null,
             "blackboard": [
               {
@@ -7495,7 +7495,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7514,7 +7514,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7558,7 +7558,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7734,7 +7734,7 @@
   },
   "char_210_stward": {
     "name": "Steward",
-    "description": "Deals <@ba.kw>Arts Damage</>",
+    "description": "Gây <@ba.kw>Arts Damage</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_210_stward",
     "team": 3,
@@ -7890,7 +7890,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Armor Break",
-            "description": "ATK +3%; Attacks enemies with the highest DEF first",
+            "description": "ATK +3%; Ưu tiên ấn công kẻ địch có DEF cao nhất",
             "rangeId": null,
             "blackboard": [
               {
@@ -7907,7 +7907,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Armor Break",
-            "description": "ATK +6%; Attacks enemies with the highest DEF first",
+            "description": "ATK +6%; Ưu tiên tấn công kẻ địch có DEF cao nhất",
             "rangeId": null,
             "blackboard": [
               {
@@ -7922,7 +7922,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7941,7 +7941,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7979,7 +7979,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -7998,7 +7998,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -8174,7 +8174,7 @@
   },
   "char_278_orchid": {
     "name": "Orchid",
-    "description": "Deals <@ba.kw>Arts Damage</> and <@ba.kw>Slows</> the target for a short time",
+    "description": "Gây <@ba.kw>Arts Damage</> and <@ba.kw>Slows</> the target for a short time",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_278_orchid",
     "team": 19,
@@ -8379,7 +8379,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -8398,7 +8398,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -8436,7 +8436,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -8455,7 +8455,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -8631,7 +8631,7 @@
   },
   "char_141_nights": {
     "name": "Haze",
-    "description": "Deals <@ba.kw>Arts Damage</>",
+    "description": "Gây <@ba.kw>Arts Damage</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_141_nights",
     "team": -1,
@@ -9032,7 +9032,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Black Mist",
-            "description": "Attacks reduce the target's RES by 10% for 1 second",
+            "description": "Mỗi lần tấn công sẽ giảm RES của kẻ địch đi 10% trong 1 giây",
             "rangeId": null,
             "blackboard": [
               {
@@ -9053,7 +9053,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Black Mist",
-            "description": "Attacks reduce the target's RES by 13% <@ba.talpu>(+3%)</> for 1 second",
+            "description": "Mỗi lần tấn công sẽ giảm RES của kẻ địch đi 13% <@ba.talpu>(+3%)</> trong 1 giây",
             "rangeId": null,
             "blackboard": [
               {
@@ -9074,7 +9074,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Black Mist",
-            "description": "Attacks reduce the target's RES by 20% for 1 second",
+            "description": "Mỗi lần tấn công sẽ giảm RES của kẻ địch đi 20% trong 1 giây",
             "rangeId": null,
             "blackboard": [
               {
@@ -9095,7 +9095,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Black Mist",
-            "description": "Attacks reduce the target's RES by 23% <@ba.talpu>(+3%)</> for 1 second",
+            "description": "Mỗi lần tấn công sẽ giảm RES của kẻ địch đi 23% <@ba.talpu>(+3%)</> trong 1 giây",
             "rangeId": null,
             "blackboard": [
               {
@@ -9114,7 +9114,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -9133,7 +9133,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -9177,7 +9177,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -9753,7 +9753,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Divination",
-            "description": "Obtains one of the following buffs permanently when deployed: ATK +7%, ASPD +7, or Max HP +12%",
+            "description": "Nhận được ngẫu nhiên 1 trong các buffs sau vĩnh viễn khi được triển khai: ATK +7%, ASPD +7, hoặc Max HP +12%",
             "rangeId": null,
             "blackboard": [
               {
@@ -9778,7 +9778,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Divination",
-            "description": "Obtains one of the following buffs permanently when deployed: ATK +9% <@ba.talpu>(+2%)</>, ASPD +9 <@ba.talpu>(+2)</>, or Max HP +14% <@ba.talpu>(+2%)</>",
+            "description": "Nhận được ngẫu nhiên 1 trong các buffs sau vĩnh viễn khi được triển khai: ATK +9% <@ba.talpu>(+2%)</>, ASPD +9 <@ba.talpu>(+2)</>, hoặc Max HP +14% <@ba.talpu>(+2%)</>",
             "rangeId": null,
             "blackboard": [
               {
@@ -9803,7 +9803,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Divination",
-            "description": "Obtains one of the following buffs permanently when deployed: ATK +13%, ASPD +13, or Max HP +20%",
+            "description": "Nhận được ngẫu nhiên 1 trong các buffs sau vĩnh viễn khi được triển khai: ATK +13%, ASPD +13, hoặc Max HP +20%",
             "rangeId": null,
             "blackboard": [
               {
@@ -9828,7 +9828,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Divination",
-            "description": "Obtains one of the following buffs permanently when deployed: ATK +15% <@ba.talpu>(+2%)</>, ASPD +15 <@ba.talpu>(+2)</>, Max HP +22% <@ba.talpu>(+2%)</>",
+            "description": "Nhận được ngẫu nhiên 1 trong các buffs sau vĩnh viễn khi được triển khai: ATK +15% <@ba.talpu>(+2%)</>, ASPD +15 <@ba.talpu>(+2)</>, Max HP +22% <@ba.talpu>(+2%)</>",
             "rangeId": null,
             "blackboard": [
               {
@@ -9851,7 +9851,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -9870,7 +9870,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -9914,7 +9914,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -10090,7 +10090,7 @@
   },
   "char_253_greyy": {
     "name": "Greyy",
-    "description": "Deals <@ba.kw>AOE Arts Damage</>",
+    "description": "Gây <@ba.kw>AOE Arts Damage</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_253_greyy",
     "team": -1,
@@ -10491,7 +10491,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Electrostatic Field",
-            "description": "Reduces the target's movement speed for 0.4 seconds when attacking",
+            "description": "Giảm tốc chạy của kẻ địch trong vòng 0.4 giây mỗi khi tấn công",
             "rangeId": null,
             "blackboard": [
               {
@@ -10508,7 +10508,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Electrostatic Field",
-            "description": "Reduces the target's movement speed for 0.6 seconds when attacking",
+            "description": "Giảm tốc chạy của kẻ địch trong vòng 0,6 giây mỗi khi tấn công.",
             "rangeId": null,
             "blackboard": [
               {
@@ -10523,7 +10523,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -10542,7 +10542,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -10580,7 +10580,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -10599,7 +10599,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -10775,7 +10775,7 @@
   },
   "char_235_jesica": {
     "name": "Jessica",
-    "description": "Attacks aerial enemies first",
+    "description": "Ưu tiên tấn công kẻ địch trên không",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_235_jesica",
     "team": 13,
@@ -11208,7 +11208,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -11227,7 +11227,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -11265,7 +11265,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -11284,7 +11284,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -11460,7 +11460,7 @@
   },
   "char_126_shotst": {
     "name": "Meteor",
-    "description": "Attacks aerial enemies first",
+    "description": "Ưu tiên tấn công kẻ địch trên không",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_126_shotst",
     "team": -1,
@@ -11861,7 +11861,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Anti-Air Specialist",
-            "description": "ATK +20% when attacking aerial targets",
+            "description": "ATK +20% khi tấn công kẻ địch trên không",
             "rangeId": null,
             "blackboard": [
               {
@@ -11878,7 +11878,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Anti-Air Specialist",
-            "description": "ATK +25% <@ba.talpu>(+5%)</> when attacking aerial targets",
+            "description": "ATK +25% <@ba.talpu>(+5%)</> khi tấn công kẻ địch trên không",
             "rangeId": null,
             "blackboard": [
               {
@@ -11895,7 +11895,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Anti-Air Specialist",
-            "description": "ATK +35% when attacking aerial targets",
+            "description": "ATK +35% khi tấn công kẻ địch trên không",
             "rangeId": null,
             "blackboard": [
               {
@@ -11912,7 +11912,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Anti-Air Specialist",
-            "description": "ATK +40% <@ba.talpu>(+5%)</> when attacking aerial targets",
+            "description": "ATK +40% <@ba.talpu>(+5%)</> khi tấn công kẻ địch trên không",
             "rangeId": null,
             "blackboard": [
               {
@@ -11927,7 +11927,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -11946,7 +11946,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -11990,7 +11990,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -12166,7 +12166,7 @@
   },
   "char_190_clour": {
     "name": "Vermeil",
-    "description": "Attacks aerial enemies first",
+    "description": "Ưu tiên tấn công kẻ địch trên không",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_190_clour",
     "team": -1,
@@ -12566,7 +12566,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Hunter's Wisdom",
-            "description": "Slightly increases this unit’s Skill Point recovery speed",
+            "description": "Tăng tốc độ hồi SP của unit này một ít",
             "rangeId": null,
             "blackboard": [
               {
@@ -12583,7 +12583,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Hunter's Wisdom",
-            "description": "Significantly increases this unit’s Skill Point recovery speed",
+            "description": "Tăng tốc độ hồi SP của unit này một ít rất nhiều",
             "rangeId": null,
             "blackboard": [
               {
@@ -12598,7 +12598,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -12617,7 +12617,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -12655,7 +12655,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -12674,7 +12674,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -12850,7 +12850,7 @@
   },
   "char_118_yuki": {
     "name": "Shirayuki",
-    "description": "Deals <@ba.kw>AOE Physical Damage</>",
+    "description": "Gây <@ba.kw>AOE Physical Damage</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_118_yuki",
     "team": -1,
@@ -13251,7 +13251,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Heavy Shuriken",
-            "description": "Attack Interval increases slightly, but ATK +20%",
+            "description": "Tăng độ trễ giữa những lần tấn công một ít, nhưng ATK +20%",
             "rangeId": null,
             "blackboard": [
               {
@@ -13270,7 +13270,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -13289,7 +13289,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -13327,7 +13327,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -13346,7 +13346,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -13522,7 +13522,7 @@
   },
   "char_198_blackd": {
     "name": "Courier",
-    "description": "Blocks 2 enemies",
+    "description": "Chặn 2 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_198_blackd",
     "team": 6,
@@ -13923,7 +13923,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Karlan Patrol",
-            "description": "DEF +8% when two or more enemies are blocked",
+            "description": "DEF +8% khi 2 hoặc nhiều kẻ địch bị chặn",
             "rangeId": null,
             "blackboard": [
               {
@@ -13944,7 +13944,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Karlan Patrol",
-            "description": "DEF +11% <@ba.talpu>(+3%)</> when two or more enemies are blocked",
+            "description": "DEF +11% <@ba.talpu>(+3%)</> khi 2 hoặc nhiều kẻ địch bị chặn",
             "rangeId": null,
             "blackboard": [
               {
@@ -13965,7 +13965,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Karlan Patrol",
-            "description": "DEF +16% when two or more enemies are blocked",
+            "description": "DEF +16% khi 2 hoặc nhiều kẻ địch bị chặn",
             "rangeId": null,
             "blackboard": [
               {
@@ -13986,7 +13986,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Karlan Patrol",
-            "description": "DEF +19% <@ba.talpu>(+3%)</> when two or more enemies are blocked",
+            "description": "DEF +19% <@ba.talpu>(+3%)</> khi 2 hoặc nhiều kẻ địch bị chặn",
             "rangeId": null,
             "blackboard": [
               {
@@ -14005,7 +14005,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -14024,7 +14024,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -14068,7 +14068,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -14244,7 +14244,7 @@
   },
   "char_149_scave": {
     "name": "Scavenger",
-    "description": "Blocks 2 enemies",
+    "description": "Chặn 2 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_149_scave",
     "team": 5,
@@ -14645,7 +14645,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Lone Wolf",
-            "description": "ATK and DEF +5% when there are no allies in the four adjacent grids",
+            "description": "ATK và DEF +5% khi không có đồng minh nào trong 4 ô liền kề",
             "rangeId": null,
             "blackboard": [
               {
@@ -14666,7 +14666,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Lone Wolf",
-            "description": "ATK and DEF +7% <@ba.talpu>(+2%)</> when there are no allies in the four adjacent grids",
+            "description": "ATK và DEF +7% <@ba.talpu>(+2%)</> khi không có đồng minh nào trong 4 ô liền kề",
             "rangeId": null,
             "blackboard": [
               {
@@ -14687,7 +14687,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Lone Wolf",
-            "description": "ATK and DEF +11% when there are no allies in the four adjacent grids",
+            "description": "ATK và DEF +11% khi không có đồng minh nào trong 4 ô liền kề",
             "rangeId": null,
             "blackboard": [
               {
@@ -14708,7 +14708,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Lone Wolf",
-            "description": "ATK and DEF +13% <@ba.talpu>(+2%)</> when there are no allies in the four adjacent grids",
+            "description": "ATK và DEF +13% <@ba.talpu>(+2%)</> khi không có đồng minh nào trong 4 ô liền kề",
             "rangeId": null,
             "blackboard": [
               {
@@ -14727,7 +14727,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -14746,7 +14746,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -14790,7 +14790,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -14966,7 +14966,7 @@
   },
   "char_290_vigna": {
     "name": "Vigna",
-    "description": "Obtain 1 DP after this unit defeats an enemy; Refunds the original DP Cost when retreated",
+    "description": "Nhận được 1 Cost mỗi khi unit này hạ 1 kẻ địch; Trả lại Cost ban đầu khi được thu hồi",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_290_vigna",
     "team": -1,
@@ -15384,7 +15384,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Fierce Stabbing",
-            "description": "When attacking, has a 10% chance to increase the current damage of that attack by 50%. The chance increases to 30% when Vigna’s skill is active.",
+            "description": "Khi tấn công, có 10% khả năng tăng DMG đòn đánh thêm 50%. Khả năng xảy ra là 30% khi Vigna đang sử dụng kỹ năng .",
             "rangeId": null,
             "blackboard": [
               {
@@ -15409,7 +15409,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Fierce Stabbing",
-            "description": "When attacking, has a 10% chance to increase the current damage of that attack by 60% <@ba.talpu>(+10%). The chance increases to 30% when Vigna’s skill is active.",
+            "description": "Khi tấn công, có 10% khả năng tăng DMG đòn đánh thêm 60% <@ba.talpu>(+10%). Khả năng xảy ra là 30% khi Vigna đang sử dụng kỹ năng .",
             "rangeId": null,
             "blackboard": [
               {
@@ -15434,7 +15434,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Fierce Stabbing",
-            "description": "When attacking, has a 10% chance to increase the current damage of that attack by 100%. The chance increases to 30% when Vigna’s skill is active.",
+            "description": "Khi tấn công, có 10% khả năng tăng DMG đòn đánh thêm 100%. Khả năng xảy ra là 30% khi Vigna đang sử dụng kỹ năng.",
             "rangeId": null,
             "blackboard": [
               {
@@ -15459,7 +15459,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Fierce Stabbing",
-            "description": "When attacking, has a 10% chance to increase the current damage of that attack by 110% <@ba.talpu>(+10%). The chance increases to 30% when Vigna’s skill is active.",
+            "description": "Khi tấn công, có 10% khả năng tăng DMG đòn đánh thêm 110% <@ba.talpu>(+10%). Khả năng xảy ra là 30% khi Vigna đang sử dụng kỹ năng ",
             "rangeId": null,
             "blackboard": [
               {
@@ -15482,7 +15482,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -15501,7 +15501,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -15545,7 +15545,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -15721,7 +15721,7 @@
   },
   "char_151_myrtle": {
     "name": "Myrtle",
-    "description": "Cannot block enemies during the skill duration",
+    "description": "Không thể chặn kẻ địch lúc sử dụng kỹ năng",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_151_myrtle",
     "team": -1,
@@ -16122,7 +16122,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Glistening",
-            "description": "All [Vanguard] Operators recover 25 HP per second while Myrtle is deployed",
+            "description": "Mọi Vanguard đồng minh được hồi 25 HP mỗi giây sau khi Myrtle được triển khai",
             "rangeId": null,
             "blackboard": [
               {
@@ -16139,7 +16139,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Glistening",
-            "description": "All [Vanguard] Operators recover 28<@ba.talpu> (+3)</> HP per second while Myrtle is deployed",
+            "description": "Mọi Vanguard đồng minh được hồi 28 HP <@ba.talpu> (+3)</> mỗi giây sau khi Myrtle được triển khai",
             "rangeId": null,
             "blackboard": [
               {
@@ -16154,7 +16154,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -16173,7 +16173,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -16217,7 +16217,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -16393,7 +16393,7 @@
   },
   "char_130_doberm": {
     "name": "Dobermann",
-    "description": "Can attack enemies <@ba.kw>from range</>",
+    "description": "Có thể tấn công <@ba.kw>from range</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_130_doberm",
     "team": -1,
@@ -16794,7 +16794,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Starter Instructor",
-            "description": "All three-star Operators' ATK +5%",
+            "description": "Đối với mọi đồng minh 3 sao, ATK +5%",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -16811,7 +16811,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Starter Instructor",
-            "description": "All three-star Operators' ATK +6% <@ba.talpu>(+1%)</>",
+            "description": "Đối với mọi đồng minh 3 sao, ATK +6% <@ba.talpu>(+1%)</>",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -16828,7 +16828,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Starter Instructor",
-            "description": "All three-star Operators' ATK +10%",
+            "description": "Đối với mọi đồng minh 3 sao, ATK +10%",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -16845,7 +16845,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Starter Instructor",
-            "description": "All three-star Operators' ATK +11% <@ba.talpu>(+1%)</>",
+            "description": "Đối với mọi đồng minh 3 sao, ATK +11% <@ba.talpu>(+1%)</>",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -16860,7 +16860,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -16879,7 +16879,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -16923,7 +16923,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -17099,7 +17099,7 @@
   },
   "char_289_gyuki": {
     "name": "Matoimaru",
-    "description": "Blocks 1 enemy",
+    "description": "Chặn 1 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_289_gyuki",
     "team": -1,
@@ -17540,7 +17540,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -17559,7 +17559,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -17603,7 +17603,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -17779,7 +17779,7 @@
   },
   "char_193_frostl": {
     "name": "Frostleaf",
-    "description": "Can launch <@ba.kw>Ranged Attacks</> that deal 80% of normal ATK",
+    "description": "Có thể cho ra <@ba.kw>Ranged Attacks</> , gây 80% DMG bình thường",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_193_frostl",
     "team": -1,
@@ -18197,7 +18197,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Covered Strike",
-            "description": "Range expands, but Attack Interval increases slightly",
+            "description": "Tầm đánh được mở rộng nhưng độ trễ giữa các lần đánh tăng lên một ít",
             "rangeId": "3-1",
             "blackboard": [
               {
@@ -18212,7 +18212,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -18231,7 +18231,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -18269,7 +18269,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -18288,7 +18288,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -18464,7 +18464,7 @@
   },
   "char_127_estell": {
     "name": "Estelle",
-    "description": "Attacks <@ba.kw>all blocked enemies</>",
+    "description": "Tấn công <@ba.kw>all blocked enemies</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_127_estell",
     "team": -1,
@@ -18865,7 +18865,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Self-Healing",
-            "description": "Restores HP by 7% of Max HP when there is an enemy killed within the 8 surrounding grids",
+            "description": "Hồi 7% HP tối đa khi có 1 kẻ địch bị giết trong 8 ô lân cận",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -18882,7 +18882,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Self-Healing",
-            "description": "Restores HP by 9% <@ba.talpu>(+2%)</> of Max HP when there is an enemy killed within the 8 surrounding grids",
+            "description": "Hồi 9% <@ba.talpu>(+2%)</> HP tối đa khi có một kẻ địch bị giết trong 8 ô lân cận.",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -18899,7 +18899,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Self-Healing",
-            "description": "Restores HP by 12% of Max HP when there is an enemy killed within the 8 surrounding grids",
+            "description": "Hồi 12% HP tối đa khi có một kẻ địch bị giết trong 8 ô lân cận.",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -18916,7 +18916,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Self-Healing",
-            "description": "Restores HP by 14% <@ba.talpu>(+2%)</> of Max HP when there is an enemy killed within the 8 surrounding grids",
+            "description": "Hồi 14% <@ba.talpu>(+2%)</> HP tối đa khi có một kẻ địch bị giết trong 8 ô lân cận.",
             "rangeId": "x-4",
             "blackboard": [
               {
@@ -18931,7 +18931,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -18950,7 +18950,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -18994,7 +18994,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -19170,7 +19170,7 @@
   },
   "char_185_frncat": {
     "name": "Mousse",
-    "description": "Deals <@ba.kw>Arts Damage</>",
+    "description": "Gây <@ba.kw>Arts Damage</>",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_185_frncat",
     "team": -1,
@@ -19570,7 +19570,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Combo",
-            "description": "Has a 10% chance to attack twice in a row when attacking",
+            "description": "Có 10% khả năng gây ra 2 đòn liên tiếp khi tấn công",
             "rangeId": null,
             "blackboard": [
               {
@@ -19587,7 +19587,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Combo",
-            "description": "Has a 13% <@ba.talpu>(+3%)</> chance to attack twice in a row when attacking",
+            "description": "Có 13% <@ba.talpu>(+3%)</> khả năng gây ra 2 đòn liên tiếp khi tấn công",
             "rangeId": null,
             "blackboard": [
               {
@@ -19604,7 +19604,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Combo",
-            "description": "Has a 20% chance to attack twice in a row when attacking",
+            "description": "Có 20% khả năng to gây ra 2 đòn liên tiếp khi tấn công",
             "rangeId": null,
             "blackboard": [
               {
@@ -19621,7 +19621,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Combo",
-            "description": "Has a 23% <@ba.talpu>(+3%)</> chance to attack twice in a row when attacking",
+            "description": "Có 23% <@ba.talpu>(+3%)</> khả năng gây ra 2 đòn liên tiếp khi tấn công",
             "rangeId": null,
             "blackboard": [
               {
@@ -19636,7 +19636,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -19655,7 +19655,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -19699,7 +19699,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -19875,7 +19875,7 @@
   },
   "char_237_gravel": {
     "name": "Gravel",
-    "description": "Significantly <@ba.kw>reduced</> Thời gian tái triển khai",
+    "description": "thời gian tái triển khai <@ba.kw>reduced</> rất nhiều",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_237_gravel",
     "team": -1,
@@ -20276,7 +20276,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Fast Deployment",
-            "description": "DP Cost -1",
+            "description": "Cost -1",
             "rangeId": null,
             "blackboard": [
               {
@@ -20293,7 +20293,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1+",
             "name": "Support of the Little",
-            "description": "DP Cost -1; The DEF of all allies with DP Cost lower than 10 increases by 6%",
+            "description": "Cost -1; mọi đồng minh có Cost <10 được tăng 8% DEF",
             "rangeId": null,
             "blackboard": [
               {
@@ -20318,7 +20318,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1+",
             "name": "Support of the Little",
-            "description": "DP Cost -1; The DEF of all allies with DP Cost lower than 10 increases by 8% <@ba.talpu>(+2%)</>",
+            "description": "Cost -1; Mọi đồng minh có Cost <10 được tăng thêm 8% <@ba.talpu>(+2%)</> DEF",
             "rangeId": null,
             "blackboard": [
               {
@@ -20341,7 +20341,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -20404,7 +20404,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -20980,7 +20980,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Auditory Training",
-            "description": "Obtains 15% Physical Dodge",
+            "description": "Nhận được 15% khả năng né Phys DMG",
             "rangeId": null,
             "blackboard": [
               {
@@ -20997,7 +20997,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Auditory Training",
-            "description": "Obtains 19% <@ba.talpu>(+4%)</> Physical Dodge",
+            "description": "Nhận được 19% <@ba.talpu>(+4%)</> khả năng né Phys DMG",
             "rangeId": null,
             "blackboard": [
               {
@@ -21014,7 +21014,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Auditory Training",
-            "description": "Obtains 30% Physical Dodge",
+            "description": "Nhận được 30% khả năng né Phys DMG",
             "rangeId": null,
             "blackboard": [
               {
@@ -21031,7 +21031,7 @@
             "requiredPotentialRank": 4,
             "prefabKey": "1",
             "name": "Auditory Training",
-            "description": "Obtains 34% <@ba.talpu>(+4%)</> Physical Dodge",
+            "description": "Nhận được 34% <@ba.talpu>(+4%)</> khả năng né Phys DMG",
             "rangeId": null,
             "blackboard": [
               {
@@ -21046,7 +21046,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -21065,7 +21065,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -21109,7 +21109,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -21285,7 +21285,7 @@
   },
   "char_117_myrrh": {
     "name": "Myrrh",
-    "description": "Restores the HP of allies",
+    "description": "Hồi HP cho đồng minh",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_117_myrrh",
     "team": -1,
@@ -21751,7 +21751,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -21770,7 +21770,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -21814,7 +21814,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -21990,7 +21990,7 @@
   },
   "char_187_ccheal": {
     "name": "Gavial",
-    "description": "Restores the HP of allies",
+    "description": "Hồi HP cho đồng minh",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_187_ccheal",
     "team": -1,
@@ -22488,7 +22488,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -22507,7 +22507,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -22551,7 +22551,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -23193,7 +23193,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -23212,7 +23212,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -23256,7 +23256,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -23864,7 +23864,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -23883,7 +23883,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -23921,7 +23921,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -23940,7 +23940,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -24548,7 +24548,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -24567,7 +24567,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -24605,7 +24605,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -24624,7 +24624,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -25299,7 +25299,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -25318,7 +25318,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -25362,7 +25362,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -25987,7 +25987,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -26006,7 +26006,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -26044,7 +26044,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -26063,7 +26063,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -26688,7 +26688,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -26707,7 +26707,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -26751,7 +26751,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -27359,7 +27359,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -27378,7 +27378,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -27416,7 +27416,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -27435,7 +27435,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28044,7 +28044,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28063,7 +28063,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28101,7 +28101,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28120,7 +28120,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28301,7 +28301,7 @@
   },
   "char_115_headbr": {
     "name": "Zima",
-    "description": "Blocks 2 enemies",
+    "description": "Chặn 2 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_115_headbr",
     "team": 8,
@@ -28702,7 +28702,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Spearheader",
-            "description": "DP Cost -1",
+            "description": "Cost -1",
             "rangeId": null,
             "blackboard": [
               {
@@ -28719,7 +28719,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1+",
             "name": "Spearheader",
-            "description": "All [Vanguard] Operators' DP Cost -1 when Zima is in the squad",
+            "description": "All [Vanguard] Operators' Cost -1 when Zima is in the squad",
             "rangeId": null,
             "blackboard": [
               {
@@ -28734,7 +28734,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28753,7 +28753,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28791,7 +28791,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28810,7 +28810,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -28991,7 +28991,7 @@
   },
   "char_102_texas": {
     "name": "Texas",
-    "description": "Blocks 2 enemies",
+    "description": "Chặn 2 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_102_texas",
     "team": 11,
@@ -29424,7 +29424,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -29443,7 +29443,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -29481,7 +29481,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -29500,7 +29500,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -30182,7 +30182,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -30201,7 +30201,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -30245,7 +30245,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -30426,7 +30426,7 @@
   },
   "char_106_franka": {
     "name": "Franka",
-    "description": "Blocks 1 enemy",
+    "description": "Chặn 1 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_106_franka",
     "team": 13,
@@ -30859,7 +30859,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -30878,7 +30878,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -30916,7 +30916,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -30935,7 +30935,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -31116,7 +31116,7 @@
   },
   "char_131_flameb": {
     "name": "Flamebringer",
-    "description": "Blocks 1 enemy",
+    "description": "Chặn 1 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_131_flameb",
     "team": -1,
@@ -31599,7 +31599,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -31637,7 +31637,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -31662,7 +31662,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -31843,7 +31843,7 @@
   },
   "char_155_tiger": {
     "name": "Indra",
-    "description": "Blocks 1 enemy",
+    "description": "Chặn 1 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_155_tiger",
     "team": 10,
@@ -32326,7 +32326,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -32345,7 +32345,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -32389,7 +32389,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -33054,7 +33054,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -33073,7 +33073,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -33117,7 +33117,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -33781,7 +33781,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -33800,7 +33800,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -33844,7 +33844,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -34474,7 +34474,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -34493,7 +34493,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -34531,7 +34531,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -34550,7 +34550,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -34731,7 +34731,7 @@
   },
   "char_129_bluep": {
     "name": "Blue Poison",
-    "description": "Attacks aerial enemies first",
+    "description": "Ưu tiên tấn công kẻ địch trên không",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_129_bluep",
     "team": -1,
@@ -35213,7 +35213,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -35232,7 +35232,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -35276,7 +35276,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -35457,7 +35457,7 @@
   },
   "char_204_platnm": {
     "name": "Platinum",
-    "description": "Attacks aerial enemies first",
+    "description": "Ưu tiên tấn công kẻ địch trên không",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_204_platnm",
     "team": -1,
@@ -35971,7 +35971,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -35990,7 +35990,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -36034,7 +36034,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -36656,7 +36656,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -36675,7 +36675,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -36713,7 +36713,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -36732,7 +36732,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -37396,7 +37396,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -37415,7 +37415,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -37459,7 +37459,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -38194,7 +38194,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -38232,7 +38232,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -38886,7 +38886,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -38905,7 +38905,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -38949,7 +38949,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -39580,7 +39580,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -39599,7 +39599,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -39637,7 +39637,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -39656,7 +39656,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -39837,7 +39837,7 @@
   },
   "char_108_silent": {
     "name": "Silence",
-    "description": "Restores the HP of allies",
+    "description": "Hồi HP cho đồng minh",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_108_silent",
     "team": 4,
@@ -40303,7 +40303,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -40322,7 +40322,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -40366,7 +40366,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -40547,7 +40547,7 @@
   },
   "char_171_bldsk": {
     "name": "Warfarin",
-    "description": "Restores the HP of allies",
+    "description": "Hồi HP cho đồng minh",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_171_bldsk",
     "team": -1,
@@ -40988,7 +40988,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -41007,7 +41007,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -41045,7 +41045,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -41064,7 +41064,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -41712,7 +41712,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -41731,7 +41731,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -41775,7 +41775,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -42423,7 +42423,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -42486,7 +42486,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -43121,7 +43121,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -43140,7 +43140,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -43184,7 +43184,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -43848,7 +43848,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -43867,7 +43867,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -43911,7 +43911,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -44576,7 +44576,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -44595,7 +44595,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -44639,7 +44639,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -45318,7 +45318,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -45337,7 +45337,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -45381,7 +45381,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -46029,7 +46029,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -46048,7 +46048,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -46092,7 +46092,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -46756,7 +46756,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -46775,7 +46775,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -46819,7 +46819,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -47503,7 +47503,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -47522,7 +47522,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -47566,7 +47566,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -48205,7 +48205,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -48224,7 +48224,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -48268,7 +48268,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -48890,7 +48890,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -48909,7 +48909,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -48947,7 +48947,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -48966,7 +48966,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -49647,7 +49647,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -49666,7 +49666,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -49710,7 +49710,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -50358,7 +50358,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -50377,7 +50377,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -50421,7 +50421,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -50602,7 +50602,7 @@
   },
   "char_103_angel": {
     "name": "Exusiai",
-    "description": "Attacks aerial enemies first",
+    "description": "Ưu tiên tấn công kẻ địch trên không",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_103_angel",
     "team": 11,
@@ -51197,7 +51197,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -51241,7 +51241,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -51438,7 +51438,7 @@
   },
   "char_112_siege": {
     "name": "Siege",
-    "description": "Blocks 2 enemies",
+    "description": "Chặn 2 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_112_siege",
     "team": 10,
@@ -52025,7 +52025,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -52044,7 +52044,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -52088,7 +52088,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -52909,7 +52909,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -52953,7 +52953,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -53746,7 +53746,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -53790,7 +53790,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -54593,7 +54593,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -54637,7 +54637,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -55420,7 +55420,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -55439,7 +55439,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -55483,7 +55483,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -55674,7 +55674,7 @@
   },
   "char_147_shining": {
     "name": "Shining",
-    "description": "Restores the HP of allies",
+    "description": "Hồi HP cho đồng minh",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_147_shining",
     "team": 9,
@@ -56296,7 +56296,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -56340,7 +56340,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -57142,7 +57142,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -57161,7 +57161,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -57205,7 +57205,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -57984,7 +57984,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -58028,7 +58028,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -58845,7 +58845,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -58864,7 +58864,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -58908,7 +58908,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -59698,7 +59698,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -59717,7 +59717,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -59761,7 +59761,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -60530,7 +60530,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -60549,7 +60549,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -60593,7 +60593,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -61436,7 +61436,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -61455,7 +61455,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -61499,7 +61499,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -65807,7 +65807,7 @@
             "requiredPotentialRank": 0,
             "prefabKey": "1",
             "name": "Lightweight",
-            "description": "DP Cost -1",
+            "description": "Cost -1",
             "rangeId": null,
             "blackboard": [
               {
@@ -65822,7 +65822,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -65841,7 +65841,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -65879,7 +65879,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -6 sec",
+        "description": "Thời gian tái triển khai giảm 6 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -65898,7 +65898,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -66329,7 +66329,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -66348,7 +66348,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -66392,7 +66392,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -66568,7 +66568,7 @@
   },
   "char_137_brownb": {
     "name": "Beehunter",
-    "description": "Blocks 1 enemy",
+    "description": "Chặn 1 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_137_brownb",
     "team": -1,
@@ -67050,7 +67050,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -67069,7 +67069,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -67113,7 +67113,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -67773,7 +67773,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -67792,7 +67792,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -67836,7 +67836,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -68017,7 +68017,7 @@
   },
   "char_220_grani": {
     "name": "Grani",
-    "description": "Obtain 1 DP after this unit defeats an enemy; Refunds the original DP Cost when retreated",
+    "description": "Nhận được 1 Cost mỗi khi unit này hạ 1 kẻ địch; Trả lại Cost ban đầu khi được thu hồi",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_220_grani",
     "team": -1,
@@ -68501,7 +68501,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -68539,7 +68539,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -68564,7 +68564,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -68745,7 +68745,7 @@
   },
   "char_263_skadi": {
     "name": "Skadi",
-    "description": "Blocks 1 enemy",
+    "description": "Chặn 1 kẻ địch",
     "canUseGeneralPotentialItem": true,
     "potentialItemId": "p_char_263_skadi",
     "team": 15,
@@ -69316,7 +69316,7 @@
     "potentialRanks": [
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -69335,7 +69335,7 @@
       },
       {
         "type": 0,
-        "description": "Thời gian tái triển khai -4 sec",
+        "description": "Thời gian tái triển khai giảm 4 giây",
         "buff": {
           "attributes": {
             "abnormalFlags": null,
@@ -69379,7 +69379,7 @@
       },
       {
         "type": 0,
-        "description": "DP Cost -1",
+        "description": "Cost -1",
         "buff": {
           "attributes": {
             "abnormalFlags": null,

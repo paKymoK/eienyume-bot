@@ -28,7 +28,6 @@ client.on('message', message => {
   profileOperator(message, client)
   //trade
   trade(message, client)
-
   ////ggz
   //translate
   // translate(message, client);
@@ -140,4 +139,6 @@ client.on('message', message => {
 //https://cdn1.iconfinder.com/data/icons/ui-set-6/100/Question_Mark-512.png
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.MY_API_KEY);
+
+
 

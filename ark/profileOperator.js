@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 var fs = require('fs');
 const { RichEmbed } = require('discord.js');
-var json = JSON.parse(fs.readFileSync('./ark/ark-data/gamedata/en_US/gamedata/excel/character_table.json', 'utf8'));
+var json = JSON.parse(fs.readFileSync('./ark/ark-data/gamedata/en_US/gamedata/excel/character_table_vn.json', 'utf8'));
 var skilltable = JSON.parse(fs.readFileSync('./ark/ark-data/gamedata/en_US/gamedata/excel/skill_table.json', 'utf8'));
 const time = 60000; // time limit: 1 min
 
@@ -218,9 +218,11 @@ function embedItem(message, client, operator) {
         });
         collector.on('end', collected => message.clearReactions());
     }
+    const transID = '323444411524448271';
+    const translator = client.users.get(transID) 
     function getList(i) {
         if ((-1 < i) && (i < maxPage)) {
-            return list[i]().setTimestamp().setFooter(`Page ${i + 1}`);
+            return list[i]().setTimestamp().setFooter(`Page ${i + 1}` + ` • Translated by ${translator.username}`);
         }
     }
     message.channel.send(getList(0))
