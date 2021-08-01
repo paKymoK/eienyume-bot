@@ -249,58 +249,58 @@ function findOperator(name) {
 
 function sendList(message, client) {
 
-    if (message.member.guild.id == 447325615587196929 || message.member.id == 337641064720760852) {
-        let messageArray = message.content.split(" ");
-        var searchString = "";
-        for (var i = 0; i < messageArray.length; i++) {
-            searchString = searchString + messageArray[i];
-            searchString = searchString.toLowerCase();
-            // console.log(searchString);
-        }
-        searchString = searchString.substr(1);
-        if (message.content.charAt(0) === "!") {
-            const listOperator = findOperator(searchString)
-            if (searchString == "meteor") {
-                listOperator.pop()
-            }
-            if (listOperator.length == 1) {
-                operator = listOperator[0]
-                embedItem(message, client, operator)
-            }
-            if (listOperator.length == 0) {
-                message.channel.send(`Không có Operator nào tên như này cả !`)
-            }
-            if (listOperator.length > 1) {
-                var description = '';
-                listOperator.forEach(element => {
-                    // console.log(element);
-                    let charCode = element.potentialItemId.slice(2)
-                    // console.log(charCode)
-                    const opeIcon = client.emojis.find(emoji => emoji.name === charCode);
-                    if (opeIcon != null) {
-                        description = description + "Tên : " + opeIcon + "  " + element.name + "\n" + "\n"
-                    } else {
-                        description = description + "Tên : " + element.name + "\n" + "\n"
-                    }
+    // if (message.member.guild.id == 447325615587196929 || message.member.id == 337641064720760852) {
+    //     let messageArray = message.content.split(" ");
+    //     var searchString = "";
+    //     for (var i = 0; i < messageArray.length; i++) {
+    //         searchString = searchString + messageArray[i];
+    //         searchString = searchString.toLowerCase();
+    //         // console.log(searchString);
+    //     }
+    //     searchString = searchString.substr(1);
+    //     if (message.content.charAt(0) === "!") {
+    //         const listOperator = findOperator(searchString)
+    //         if (searchString == "meteor") {
+    //             listOperator.pop()
+    //         }
+    //         if (listOperator.length == 1) {
+    //             operator = listOperator[0]
+    //             embedItem(message, client, operator)
+    //         }
+    //         if (listOperator.length == 0) {
+    //             message.channel.send(`Không có Operator nào tên như này cả !`)
+    //         }
+    //         if (listOperator.length > 1) {
+    //             var description = '';
+    //             listOperator.forEach(element => {
+    //                 // console.log(element);
+    //                 let charCode = element.potentialItemId.slice(2)
+    //                 // console.log(charCode)
+    //                 const opeIcon = client.emojis.find(emoji => emoji.name === charCode);
+    //                 if (opeIcon != null) {
+    //                     description = description + "Tên : " + opeIcon + "  " + element.name + "\n" + "\n"
+    //                 } else {
+    //                     description = description + "Tên : " + element.name + "\n" + "\n"
+    //                 }
 
-                })
-                if (description.length > 2000) {
-                    message.channel.send('Từ này ngắn quá , làm ơn thêm chữ đi !!');
-                } else {
-                    const embed = new RichEmbed()
-                        .setTitle('Danh sách Operator có tên : ' + message.content.slice(1, message.content.length))
-                        .setFooter("Slave của Wanderer")
-                        .setTimestamp()
-                        .setDescription(description + "\n" +
-                            "Gõ ``!<tên>`` để xem chi tiết về Operator" + "\n" +
-                            "Ví dụ ``!ifrit``")
-                    embed.setColor(0xFF0000)
-                    if (message.member.id != 602517706155229185) {
-                        message.channel.send(embed);
-                    }
-                }
-            }
-        }
-    }
+    //             })
+    //             if (description.length > 2000) {
+    //                 message.channel.send('Từ này ngắn quá , làm ơn thêm chữ đi !!');
+    //             } else {
+    //                 const embed = new RichEmbed()
+    //                     .setTitle('Danh sách Operator có tên : ' + message.content.slice(1, message.content.length))
+    //                     .setFooter("Slave của Wanderer")
+    //                     .setTimestamp()
+    //                     .setDescription(description + "\n" +
+    //                         "Gõ ``!<tên>`` để xem chi tiết về Operator" + "\n" +
+    //                         "Ví dụ ``!ifrit``")
+    //                 embed.setColor(0xFF0000)
+    //                 if (message.member.id != 602517706155229185) {
+    //                     message.channel.send(embed);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 module.exports = sendList;
